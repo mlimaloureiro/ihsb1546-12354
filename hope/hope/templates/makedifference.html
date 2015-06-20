@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SPERO</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+	<!-- CSS at the top -->
+    <!-- for testing -->
+    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}landingpage/css/style_inte.css" media="screen, handheld" />
+	<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}landingpage/css/animate.css">
+
+	<!-- for production 
+	<link rel="stylesheet" type="text/css" href="css/combined070514.min.css">-->
+
+	<!-- ScrollPane CSS -->
+    <link href="{{ MEDIA_URL }}landingpage/css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" media="all"> 
+
+	<!-- Google maps api -->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+</head>
+
+
+
+<body>
+	<!-- Map canvas -->
+	<div id="map" class="fullWidth"></div>
+
+		<div class="logotipo">
+			<div class="conLog">
+				<img id="imgLog" src="{{ MEDIA_URL }}landingpage/img/logo.png" />
+			</div>	
+		</div>
+
+
+	<!-- Content container -->
+	<div id="container">
+		<div id="imagem">
+			<div id="seta1"><img id="set1" src="{{ MEDIA_URL }}landingpage/img/seta1.png" /></div>
+
+			<div id="imagemD">
+				<div id="conImg"><img id="imgRep" src="{{ MEDIA_URL }}landingpage/img/img1.png" /></div>
+				<div id="conImg2"><img id="imgRep" src="{{ MEDIA_URL }}landingpage/img/img3.png" /></div>
+				<div id="conImg3"><img id="imgRep" src="{{ MEDIA_URL }}landingpage/img/img2.png" /></div>
+				<div id="legenda">Choose an image...</div>
+			</div>
+
+			<div id="seta2"><img id="set2" src="{{ MEDIA_URL }}landingpage/img/seta2.png" /></div>
+		</div>
+
+		<div id="titulo">
+			<textarea id="titRect" placeholder="title..." value=""></textarea>
+		</div>
+
+		<div id="descri">
+			<textarea id="descRect" placeholder="description..." value=""></textarea>
+		</div>
+
+		<div id="assSubm">
+			<div id="assunto">
+				<div id="intAss">
+					<div id="titAss">
+						Choose a Category:
+					</div>
+					<div id="listAss">
+						<form action="">
+							<p><input id="check1" type="radio" name="categoria" value="check1"><label for="check1">Electric Networks</label></p>
+							<p><input id="check2" type="radio" name="categoria" value="check2"><label for="check2">Sidewalks</label></p>
+							<p><input id="check3" type="radio" name="categoria" value="check3"><label for="check3">Floor</label></p>
+							<p><input id="check4" type="radio" name="categoria" value="check4"><label for="check4">Water Supply</label></p>
+							<p><input id="check5" type="radio" name="categoria" value="check5"><label for="check5">Sanitation</label></p>
+							<p><input id="check6" type="radio" name="categoria" value="check6"><label for="check6">Gas Networks</label></p>
+							<p><input id="check7" type="radio" name="categoria" value="check7"><label for="check7">Lighting</label></p>
+							<p><input id="check8" type="radio" name="categoria" value="check8"><label for="check8">Others</label></p>
+						</form>
+					</div>
+				</div>	
+			</div>
+
+			<div id="submeter">
+				<div id="submit">  
+                    <img id="imgSubm" src="{{ MEDIA_URL }}landingpage/img/subm.png" />
+                </div>
+                <div id="descSubm">
+                    Submit
+                </div> 
+			</div>
+		</div>
+	</div>	
+
+	<div id="container-pre">
+		<div id="place">
+			Choose a place:
+		</div>
+	</div>
+
+	<div id="container-pos">
+		<div id="thanks">
+			<b>Thank you.</b> Check other people's reports:
+		</div>
+
+		<div class="marker">
+			<img id="imgReport" src="{{ MEDIA_URL }}landingpage/img/marker1.png" />
+		</div>
+
+		<div class="marker2">
+			<img id="imgReport" src="{{ MEDIA_URL }}landingpage/img/marker2.png" />
+		</div>
+
+		<div class="marker3">
+			<img id="imgReport" src="{{ MEDIA_URL }}landingpage/img/marker3.png" />
+		</div>
+
+
+
+		<div class="repDes1"> 
+			<div class="estado">Problem not solved</div>
+			<div class="titDes">titulo que alguem deu</div>
+			<div class="txDes">
+				<p>descrição que alguem escreveu</p> 
+			</div>
+
+			<div class="ConSoc2">
+				<img id="imgSoc2" src="{{ MEDIA_URL }}landingpage/img/face.png" />
+			</div>
+			<div class="ConSoc3">
+				<img id="imgSoc3" src="{{ MEDIA_URL }}landingpage/img/twit.png" />
+			</div>
+		</div>
+
+		<div class="repDes2"> 
+			<div class="estado">Problem solved</div>
+			<div class="titDes">titulo que alguem deu</div>
+			<div class="txDes">
+				<p>descrição que alguem escreveu</p> 
+			</div>
+
+			<div class="ConSoc2">
+				<img id="imgSoc2" src="{{ MEDIA_URL }}landingpage/img/face.png" />
+			</div>
+			<div class="ConSoc3">
+				<img id="imgSoc3" src="{{ MEDIA_URL }}landingpage/img/twit.png" />
+			</div>
+		</div>
+
+		<div class="repDes3"> 
+			<div class="estado">Problem being solved</div>
+			<div class="titDes">titulo que alguem deu</div>
+			<div class="txDes">
+				<p>descrição que alguem escreveu</p> 
+			</div>
+
+			<div class="ConSoc2">
+				<img id="imgSoc2" src="{{ MEDIA_URL }}landingpage/img/face.png" />
+			</div>
+			<div class="ConSoc3">
+				<img id="imgSoc3" src="{{ MEDIA_URL }}landingpage/img/twit.png" />
+			</div>
+		</div>
+
+	</div>	
+
+	<div id="mycursor"></div>
+
+
+
+	<!-- Javascript at the bottom -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	<!-- for testing -->
+	<script type="text/javascript" src="{{ MEDIA_URL }}landingpage/js/scrollto.js"></script>
+	<script type="text/javascript" src="{{ MEDIA_URL }}landingpage/js/main_inte.js"></script>
+
+	<!-- ScrollPane JS -->
+    <script src="{{ MEDIA_URL }}landingpage/js/jquery.jscrollpane.min.js" type="text/javascript"></script>
+    <script src="{{ MEDIA_URL }}landingpage/js/jquery.mousewheel.js" type="text/javascript"></script>
+
+	<!-- for production 
+	<script type="text/javascript" src="js/c070514.js"></script>-->
+</body>
+
+</html>

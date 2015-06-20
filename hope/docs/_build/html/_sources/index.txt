@@ -1,0 +1,18 @@
+Welcome to Sperobox's documentation!
+====================================
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+   Introduction
+   Arquitecture
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+

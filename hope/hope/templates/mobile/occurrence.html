@@ -1,0 +1,68 @@
+{% extends "mobile/base.html" %}
+
+{% block content %}
+	<form action="/smartroads/m/occurrence" method="POST" >
+	<label for="occid">Tipo de Ocorrencia</label>
+	<select name="occid">
+		{% for value,key in categories %}
+		<option value="{{ key }}" {% if occid and key == occid %} selected{% endif%}>{{ value }}</option>
+		{% endfor %}
+	</select>
+	{% csrf_token %}
+	<input type="submit" value="Escolher" />
+	</form>
+	<hr/>
+	
+	{% if schema %}
+		<form method="POST" enctype="multipart/form-data">
+			<input type="hidden" name="_categoryId" value="{{ occid }}" />
+		{% for key,value in schema.items %}
+		<p>
+			<label for="{{ key }}">{{value.readable}}</label>
+			{% if value.type == "string" %}
+				<input type="text" name={{ key }} />
+			{% else %}
+				{% if value.type == "array#photo" %}
+					<input type="file" name="{{ key }}" />
+				{% endif%}
+			{% endif %}
+		</p>
+		{% endfor %}
+		
+		<hr/>
+		<div class="message">
+		<p>
+			<label for="latitude">Latitude</label>
+			<input type="text" name="latitude" id="_latfield" />
+		</p>
+		<p>
+			<label for="longitude">Longitude</label>
+			<input type="text" name="longitude" id="_lngfield" />
+		</p>
+		
+		<p>
+			<label for="accuracy">Accuracy</label>
+			<input type="text" name="accuracy" id="_accfield" />
+		</p>
+		</div>
+		{% csrf_token %}
+		<input type="submit" value="Guardar" name="save" />
+		
+		<script>
+			$(document).ready(function(){
+				if (Modernizr.geolocation) {
+					navigator.geolocation.getCurrentPosition(function(location){
+						$("#_latfield").val(location.coords.latitude);
+						$("#_lngfield").val(location.coords.longitude);
+						$("#_accfield").val(location.coords.accuracy);
+					})// let's find out where you are!
+				} else {
+					alert("can't determine your position");
+					// no native geolocation support available :(
+					// maybe try Gears or another third-party solution
+				}
+			})
+		</script>
+	{% endif %}
+	</form>
+{% endblock %}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Moth backoffice</title>
+
+	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+	<link href="{{ MEDIA_URL }}libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="{{ MEDIA_URL }}libs/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+
+	
+</head>
+<body>
+<div class="container">
+	<div id="body" class="row">
+		<div class="span3">
+			<div id="tree_schemas" class="well sidebar-nav">
+				<ul id="schema_list" class="nav nav-list">
+				<li class="nav-header"> Object types </li>
+				<!--{{rendered|safe}}-->
+				</li>
+				</ul>
+			</div>
+		</div>
+		<div id="right_pane" class="span9">
+
+		</div>
+	</div>
+
+</div>
+
+<div class="modal hide fade in" id="new_class_input">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">x</button>
+		<h3>Please give the new class a name</h3>
+	</div>
+	<div class="modal-body">
+		<input id="new_class_name" type="text"></input>
+	</div>
+	<div class="modal-footer">
+		<a href="#" class="btn" data-dismiss="modal">Cancel</a>
+		<a href="#create_class" class="btn btn-primary">OK</a>
+	</div>
+</div>
+
+<script type='text/html' id='template_schema'>
+	<div id="header"><h1 id="category_title">Editing <span id="category_name"><%= name %></span></h1><div>(<a id="delete" href="#">delete</a>)</div></div>
+	<p>
+	Here are the fields from this type, you may add, remove and/or edit fields
+	</p>
+
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Type</th>
+			</tr>
+		</thead>
+		<tbody id="type_details">
+		</tbody>
+		<tfoot>
+		<tr><td /><td><button id="add_field" class="btn btn-mini btn-success"style="float:right;"><i class="icon-plus icon-white"> </i></button></td></tr>
+		</tfoot>
+	</table>
+
+	<div style="float: right;">
+		<button id="cancel_changes" class="btn btn-danger">Cancel</button>
+		<button id="save_model" class="btn btn-success">Save</button>
+	<div>
+
+</script>
+
+<script type='text/html' id='template_list_item'>
+	<a class="open" href="#schemas/<%= id %>"><%= name %></a>
+</script>
+
+<script type='text/html' id='field_view_template'>
+	<td> <div id="name"><%= name %></div></td> <td> <span id="content"> <%= type %> </span><span id="secondary_edit"></span> <button class="btn btn-mini edit" style="float: right;">edit</button> </td>
+</script>
+
+<script src="{{ MEDIA_URL }}libs/bootstrap/js/jquery.min.js"></script>
+<script src="{{ MEDIA_URL }}libs/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="{{ MEDIA_URL }}categorias/js/lib/underscore-min.js"></script>
+<script src="{{ MEDIA_URL }}categorias/js/lib/backbone-min.js"></script>
+
+<script src="{{ MEDIA_URL }}categorias/js/SchemaModel.js"></script>
+<script src="{{ MEDIA_URL }}categorias/js/SchemaCollection.js"></script>
+<script src="{{ MEDIA_URL }}categorias/js/SchemaListItemView.js"></script>
+<script src="{{ MEDIA_URL }}categorias/js/SchemaListView.js"></script>
+<script src="{{ MEDIA_URL }}categorias/js/FieldView.js"></script>
+<script src="{{ MEDIA_URL }}categorias/js/SchemaView.js"></script>
+<script src="{{ MEDIA_URL }}categorias/js/App.js"></script>
+
+<script type="text/javascript">
+$(document).ajaxSend(function(e, xhr, settings) {
+	xhr.setRequestHeader('X-CSRFToken', '{{csrf_token}}');
+});
+</script>
+
+</body>
+
+</html>

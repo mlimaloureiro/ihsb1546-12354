@@ -1,0 +1,3456 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, body {
+	height: 2330px;
+}
+
+@font-face
+{
+  font-family: Sreg;
+  src: url('../fonts/SourceSansPro-Regular.ttf');
+}
+
+@font-face
+{
+  font-family: Ssemi;
+  src: url('../fonts/SourceSansPro-Semibold.ttf');
+}
+
+@font-face
+{
+  font-family: Sbold;
+  src: url('../fonts/SourceSansPro-Bold.ttf');
+}
+
+@font-face
+{
+  font-family: Sit;
+  src: url('../fonts/SourceSansPro-LightIt.ttf');
+}
+
+b {
+	font-family: Sbold;
+}
+
+h1{
+	font-family: Ssemi;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+a{
+	text-decoration: none;
+	color:white;
+}
+
+
+
+
+
+
+@-webkit-keyframes opacidade{
+  0%   { background: rgba(192, 57, 43, 0.8); }
+  100% { background: rgba(192, 57, 43, 1); }
+}
+@-moz-keyframes opacidade {
+  0%   { background: rgba(192, 57, 43, 0.8); }
+  100% { background: rgba(192, 57, 43, 1); }
+}
+@-o-keyframes opacidade {
+  0%   { background: rgba(192, 57, 43, 0.8); }
+  100% { background: rgba(192, 57, 43, 1); }
+}
+@keyframes opacidade {
+  0%   { background: rgba(192, 57, 43, 0.8); }
+  100% { background: rgba(192, 57, 43, 1); }
+}
+
+
+
+
+
+
+@-webkit-keyframes opacidadeBt{
+  0%   { background: rgba(40, 40, 40, 0); }
+  100% { background: rgba(40, 40, 40, 0.8); }
+}
+@-moz-keyframes opacidadeBt {
+  0%   { background: rgba(40, 40, 40, 0); }
+  100% { background: rgba(40, 40, 40, 0.8); }
+}
+@-o-keyframes opacidadeBt {
+  0%   { background: rgba(40, 40, 40, 0); }
+  100% { background: rgba(40, 40, 40, 0.8); }
+}
+@keyframes opacidadeBt {
+  0%   { background: rgba(40, 40, 40, 0); }
+  100% { background: rgba(40, 40, 40, 0.8); }
+}
+
+
+
+@-webkit-keyframes opacidadeBtD{
+  0%   { background: rgba(80, 80, 80, 0); }
+  100% { background: rgba(80, 80, 80, 0.8); }
+}
+@-moz-keyframes opacidadeBtD {
+  0%   { background: rgba(80, 80, 80, 0); }
+  100% { background: rgba(80, 80, 80, 0.8); }
+}
+@-o-keyframes opacidadeBtD {
+  0%   { background: rgba(80, 80, 80, 0); }
+  100% { background: rgba(80, 80, 80, 0.8); }
+}
+@keyframes opacidadeBtD {
+  0%   { background: rgba(80, 80, 80, 0); }
+  100% { background: rgba(80, 80, 80, 0.8); }
+}
+
+
+
+
+
+
+
+.conP {
+  -moz-animation-duration: 4s;
+  -moz-animation-delay: 0s;
+  -webkit-animation-duration:4s;
+  -webkit-animation-delay:0s;
+}
+
+.ConRepUm {
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 0s;
+  -webkit-animation-duration:1s;
+  -webkit-animation-delay:0s;
+}
+
+.ConRepDois {
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 0.5s;
+  -webkit-animation-duration:1s;
+  -webkit-animation-delay:0.5s;
+}
+
+.ConRepTres {
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 1s;
+  -webkit-animation-duration:1s;
+  -webkit-animation-delay:1s;
+}
+
+.ConRepQuatro {
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 1.5s;
+  -webkit-animation-duration:1s;
+  -webkit-animation-delay:1.5s;
+}
+
+.messUm {
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 2.5s;
+  -webkit-animation-duration:1s;
+  -webkit-animation-delay:2.5s;
+}
+
+.messUmDois {
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 2.5s;
+  -webkit-animation-duration:1s;
+  -webkit-animation-delay:2.5s;
+}
+
+html{
+	overflow: auto; 
+}
+
+body{
+	overflow: auto;
+	margin:0px;
+}
+
+.content-container {
+	display: none;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+#map img {
+	max-width: none;
+}
+
+#map {
+	min-height: 100%;
+}
+
+.conWrap{
+	width:85%;
+
+	position: absolute;
+	z-index: 100;
+	left: calc(50% - 45%);
+	top: 8%;
+
+	background: transparent;
+}
+.wrap{
+	width: 100%;
+	background: transparent;
+}
+
+
+
+/*MENU --------------------------------------------------------*/
+
+.menu{
+	position: fixed;
+	top:30px;
+	left: 30px;
+	width: 650px;
+	height: 50px;
+	z-index: 999999999999;
+	margin-left: 230px;
+	width: 100px;
+	background: transparent;
+}
+
+.um, .quatro{
+	display: none;
+}
+
+.um.rem{
+	display: none;
+}
+
+.quatro.rem{
+	display: none;
+}
+
+
+.um.fase2{
+	display: block;
+	-webkit-animation: opacidadeBt 0.5s;
+	-moz-animation: opacidadeBt 0.5s;
+	-o-animation: opacidadeBt 0.5s;
+	animation: opacidadeBt 0.5s;
+	background: rgba(40, 40, 40, 0.8);
+	float: left;
+	width: 50px;
+	height: 50px;
+}
+.seta{
+	width:15px;
+	height:15px;
+
+	margin-top: 20px;
+	margin-left: 18px;
+
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+}
+#imgBaixo, #imgCima{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+    background: transparent;
+}
+
+.quatro.fase2{
+	display: block;
+	-webkit-animation: opacidadeBtD 0.5s;
+	-moz-animation: opacidadeBtD 0.5s;
+	-o-animation: opacidadeBtD 0.5s;
+	animation: opacidadeBtD 0.5s;
+	background: rgba(80, 80, 80, 0.8);
+	float: left;
+	width: 50px;
+	height: 50px;
+}
+
+.tres2{
+	display:none;
+}
+
+/*MENU --------------------------------------------------------*/
+
+
+
+
+
+
+
+/*LOGO --------------------------------------------------------*/
+
+.logotipo{
+	width: 230px;
+	height: 50px;
+
+	top: 30px;
+	left: 30px;
+	z-index: 999999999999;
+	position: fixed;
+
+	background: rgba(0,0,0,0.8);
+}
+
+.conLog{
+	width:160px;
+	height:40px;
+
+	margin-top: 6px;
+	margin-left: calc(50% - 88px);
+
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+}
+#imgLog{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+    background: transparent;
+}
+
+
+/*
+.logotipo.fase2{
+	-webkit-animation: widthLogo 0.1s;
+	-moz-animation: widthLogo 0.1s;
+	-o-animation: widthLogo 0.1s;
+	animation: widthLogo 0.1s;
+
+	-webkit-animation: heightLogo 0.1s;
+	-moz-animation: heightLogo 0.1s;
+	-o-animation: heightLogo 0.1s;
+	animation: heightLogo 0.1s;
+
+	width: 180px;
+	height: 40px;
+
+	top: 30px;
+	left: 30px;
+	z-index: 999999999999;
+	position: fixed;
+
+	background: rgba(0,0,0,0.8);
+}
+
+.conLog.fase2{
+	-webkit-animation: widthConlog 0.1s;
+	-moz-animation: widthConlog 0.1s;
+	-o-animation: widthConlog 0.1s;
+	animation: widthConlog 0.1s;
+
+	width:130px;
+	height:40px;
+
+	margin-top: 5px;
+	margin-left: calc(50% - 75px);
+
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+}
+*/
+/*LOGO --------------------------------------------------------*/
+
+
+
+
+
+
+
+/* DESCRIÇÃO REPORTS 1---------------------------------------------*/
+.repDes1{
+	width:40%;
+	height: 270px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 46%;
+	margin-top: 120px;
+	background: rgba(192, 57, 43, 0.9);
+	display: none;
+}
+.txDes1{
+	width:90%;
+	height: 100px;
+	font-size: 20px;
+	font-family: Sreg;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.ConProb{
+	width:15%;
+	height: 300px;
+	display:block; 
+    position:absolute;
+    overflow:hidden;
+    z-index: 9999;
+    margin-left: 30%;
+    margin-top: 120px;
+
+    background: transparent;
+    display: none;
+}
+#imgProb{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.ConSoc2{
+	width:35px;
+	height: 35px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-top: 50px;
+    margin-left: 20px;
+
+    background: transparent;
+}
+#imgSoc2{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+.ConSoc3{
+	width:35px;
+	height: 35px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-top: -35px;
+    margin-left: 70px;
+
+    background: transparent;
+}
+#imgSoc3{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+/* DESCRIÇÃO REPORTS 1---------------------------------------------*/
+
+/* DESCRIÇÃO REPORTS 2---------------------------------------------*/
+.repDes2{
+	width:40%;
+	height: 260px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 41%;
+	margin-top: 150px;
+	background: rgba(192, 57, 43, 0.9);
+	display: none;
+}
+.txDes{
+	width:90%;
+	height: 100px;
+	font-size: 20px;
+	font-family: Sreg;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.ConProb2{
+	width:25%;
+	height: 300px;
+	display:block; 
+    position:absolute;
+    overflow:hidden;
+    z-index: 9999;
+    margin-left: 15%;
+    margin-top: 150px;
+
+    background: transparent;
+    display: none;
+}
+#imgProb2{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.ConSoc2{
+	width:35px;
+	height: 35px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-top: 50px;
+    margin-left: 20px;
+
+    background: transparent;
+}
+#imgSoc2{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+.ConSoc3{
+	width:35px;
+	height: 35px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-top: -35px;
+    margin-left: 70px;
+
+    background: transparent;
+}
+#imgSoc3{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+/* DESCRIÇÃO REPORTS 2---------------------------------------------*/
+
+
+/* DESCRIÇÃO REPORTS 3---------------------------------------------*/
+.repDes3{
+	width:40%;
+	height: 270px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 31%;
+	margin-top: 200px;
+	background: rgba(192, 57, 43, 0.9);
+	display: none;
+}
+.txDes3{
+	width:90%;
+	height: 100px;
+	font-size: 20px;
+	font-family: Sreg;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.ConProb3{
+	width:20%;
+	height: 300px;
+	display:block; 
+    position:absolute;
+    overflow:hidden;
+    z-index: 9999;
+    margin-left: 10%;
+    margin-top: 200px;
+
+    background: transparent;
+    display: none;
+}
+#imgProb3{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.ConSoc2{
+	width:35px;
+	height: 35px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-top: 90px;
+    margin-left: 20px;
+
+    background: transparent;
+}
+#imgSoc2{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+.ConSoc3{
+	width:35px;
+	height: 35px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-top: -35px;
+    margin-left: 70px;
+
+    background: transparent;
+}
+#imgSoc3{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+/* DESCRIÇÃO REPORTS 3---------------------------------------------*/
+
+
+/* DESCRIÇÃO REPORTS 4---------------------------------------------*/
+.repDes4{
+	width:300px;
+	height: 140px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 55%;
+	margin-top: 100px;
+	background: rgba(192, 57, 43, 0.9);
+	display: none;
+}
+.txDes4{
+	width:240px;
+	height: 100px;
+	font-size: 20px;
+	font-family: Sreg;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.go{
+	font-family: Sbold;
+	cursor: pointer;
+	font-size: 26px;
+	width: 100px;
+}
+
+.tri4{
+	width:80px;
+	height: 55px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-left: 15%;
+    margin-top: 15px;
+
+    background: transparent;
+}
+#imgTri4{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+/* DESCRIÇÃO REPORTS 4---------------------------------------------*/
+
+
+
+
+
+/* PRIMEIRO SLIDE ---------------------------------------------*/
+.sliUm{
+	width:100%;
+	height: 560px;
+
+	margin-top: 30px;
+	background: transparent;
+}
+/* REPORTS -----------------*/
+.ConRep{
+	width:100%;
+	height: 360px;
+	display:block; 
+    position:relative;
+
+    margin: auto;
+
+    background: transparent;
+}
+
+
+/*UM*/
+.repUm{
+	width:170px;
+	height: 150px;
+	position: absolute;
+	margin-top: 60px;
+	margin-left: 10%;
+	background: transparent;
+}
+.repUm:hover > .ConDesUm{
+  -webkit-animation: opacidade 1s;
+  -moz-animation: opacidade 1s;
+  -o-animation: opacidade 1s;
+  animation: opacidade 1s;
+  background: rgba(192, 57, 43, 1);
+}
+
+.ConDesUm{
+	position: absolute;
+	margin-top: -30px;
+	width:150px;
+	height: 15px;
+	background: rgba(192, 57, 43, 0.8);
+	font-family: Sreg;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+	display: none;
+}
+
+.ConRepUm{
+	width:40px;
+	height: 80px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin: auto;
+    margin-top: 30px;
+
+    background: transparent;
+
+    z-index: 1000;
+
+    cursor: pointer;
+}
+#imgRepUm{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+/*UM*/
+
+/*DOIS*/
+.repDois{
+	width:170px;
+	height: 150px;
+	position: absolute;
+	margin-left: 75%;
+	background: transparent;
+}
+.repDois:hover > .ConDesDois{
+  -webkit-animation: opacidade 1s;
+  -moz-animation: opacidade 1s;
+  -o-animation: opacidade 1s;
+  animation: opacidade 1s;
+  background: rgba(192, 57, 43, 1);
+}
+.ConDesDois{
+	position: absolute;
+	margin-top: -30px;
+	width:150px;
+	height: 15px;
+	background: rgba(192, 57, 43, 0.8);
+	font-family: Sreg;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+	display:none;
+}
+
+.ConRepDois{
+	width:40px;
+	height: 80px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin: auto;
+    margin-top: 30px;
+
+    background: transparent;
+
+    z-index: 1000;
+
+    cursor: pointer;
+}
+#imgRepDois{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+/*DOIS*/
+
+
+/*TRES*/
+.repTres{
+	width:220px;
+	height: 150px;
+	position: absolute;
+	margin-top: 70px;
+	margin-left: 50%;
+	background: transparent;
+}
+.repTres:hover > .ConDesTres{
+  -webkit-animation: opacidade 1s;
+  -moz-animation: opacidade 1s;
+  -o-animation: opacidade 1s;
+  animation: opacidade 1s;
+  background: rgba(192, 57, 43, 1);
+}
+.ConDesTres{
+	position: absolute;
+	margin-top: -30px;
+	width:200px;
+	height: 15px;
+	background: rgba(192, 57, 43, 0.8);
+	font-family: Sreg;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+	display:none;
+}
+
+.ConRepTres{
+	width:40px;
+	height: 80px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin: auto;
+    margin-top: 30px;
+
+    background: transparent;
+
+    z-index: 1000;
+
+     cursor: pointer;
+}
+#imgRepTres{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+/*TRES*/
+
+
+
+/*QUATRO*/
+.repQuatro{
+	width:170px;
+	height: 150px;
+	position: absolute;
+	margin-top: 180px;
+	margin-left: 35%;
+	background: transparent;
+}
+.repQuatro:hover > .ConDesQuatro{
+  -webkit-animation: opacidade 1s;
+  -moz-animation: opacidade 1s;
+  -o-animation: opacidade 1s;
+  animation: opacidade 1s;
+  background: rgba(192, 57, 43, 1);
+}
+.ConDesQuatro{
+	position: absolute;
+	margin-top: -40px;
+	width:150px;
+	height: 15px;
+	background: rgba(192, 57, 43, 0.8);
+	font-family: Ssemi;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+	display:none;
+}
+#imgDesQuatro{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+.ConRepQuatro{
+	width:40px;
+	height: 80px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin: auto;
+    margin-top: 20px;
+
+    background: transparent;
+
+    z-index: 1000;
+
+     cursor: pointer;
+}
+#imgRepQuatro{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+/*TRES*/
+/* REPORTS -----------------*/
+
+
+/* MENSAGEM UM -----------------*/
+.messUm{
+	width:100%;
+	height: 100px;
+	margin-top: 10px;
+
+	line-height: 150%;
+	text-align: center;
+	font-size: 24px;
+	font-family: Ssemi;
+	color: white;
+
+	background: transparent;
+}
+
+.btMessUm{
+	width:270px;
+	margin-left: 15%;
+	float: left;
+}
+
+.txMessUm{
+	width:270px;
+
+	padding-top: 10px;
+	padding-bottom: 12px;
+	margin: auto;
+
+	background: rgba(46, 204, 113,0.8);
+}
+
+.Contri{
+	width:80px;
+	height: 55px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-left: 60%;
+    margin-top: 15px;
+
+    background: transparent;
+    z-index: 999999999;
+}
+#imgTri{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+/* MENSAGEM UM -----------------*/
+
+
+/* MENSAGEM UM DOIS-----------------*/
+.messUmDois{
+	width:50%;
+	height: 100px;
+	float: right;
+
+	line-height: 150%;
+	text-align: center;
+	font-size: 24px;
+	font-family: Ssemi;
+	color: white;
+
+	background: transparent;
+	z-index: 9999999;
+}
+
+.btMessUmDois{
+	width:350px;
+	margin-left: 0%;
+	margin-top: -60px;
+	float: left;
+	background: transparent;
+	z-index: 99999999;
+}
+
+.txMessUmDois{
+	width:270px;
+
+	padding-top: 10px;
+	padding-bottom: 12px;
+	margin: auto;
+
+	background: rgba(52, 152, 219, 0.9);
+}
+
+.triangulo2{
+	width:80px;
+	height: 55px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-left: 25%;
+    margin-top: 15px;
+
+    background: transparent;
+}
+
+/* MENSAGEM UM DOIS-----------------*/
+/* PRIMEIRO SLIDE ---------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/* SEGUNDO SLIDE ---------------------------------------------*/
+.sliDois{
+	width:80%;
+	height: 530px;
+
+	margin: auto;
+	margin-top: 300px;
+
+	background: transparent;
+}
+
+
+.conAni{
+	width:460px;
+	height: 520px;
+	float: left;
+	margin-left:-5%;
+	background: transparent;
+}
+/* IMG TELEMOVEL -----------------*/
+.ConT1{
+	/*width do telemovel(ou foto) só é 220px*/
+	/*width:270px;*/
+	width:460px;
+	height: 460px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+
+    background: transparent;
+}
+.ConT2{
+	width:460px;
+	height: 460px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+
+    background: transparent;
+
+    display: none;
+}
+.ConT3{
+	width:460px;
+	height: 460px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+
+    background: transparent;
+
+    display: none;
+}
+
+#imgT{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+/* IMG TELEMOVEL -----------------*/
+
+/* NUMEROS -----------------*/
+.numeros{
+	width:220px;
+	height: 40px;
+	position: absolute;
+
+	margin-top: 422px;
+	margin-left: 200px;
+	font-family: Ssemi;
+	font-size: 38px;
+}
+
+.numUm{
+	width:40px;
+	color:white;
+	background: rgba(46, 204, 113,0.8);
+	text-align: center;
+}
+
+.numDois{
+	width:40px;
+	margin-left: 50px;
+	margin-top: -38px;
+	color: white;
+	background: rgba(46, 204, 113,0.8);
+	text-align: center;
+}
+
+.numTres{
+	width:40px;
+	margin-left: 100px;
+	margin-top: -38px;
+	color: white;
+	background: rgba(46, 204, 113,0.8);
+	text-align: center;
+}
+/* NUMEROS -----------------*/
+
+
+
+
+.afeWrap{
+	height: 300px;
+	width:58%;
+	margin-left: 350px;
+
+	position: absolute;
+	background: transparent;
+}
+/* EXCLAMAÇÃO -----------------*/
+.conAfe{
+	width:400px;
+	height: 125px;
+
+	float: left;
+	margin-left: 20%;
+	margin-top: 20px;
+
+	background: rgba(46, 204, 113,0.8);
+	display: none;
+}
+
+.afect{
+	width:350px;
+
+	margin: auto;
+}
+
+.ConEx{
+	width:15px;
+	height: 90px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-top: 25px;
+    margin-left: 10px;
+
+    background: transparent;
+}
+#imgEx{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.exMess{
+	width: 300px;
+
+	margin-top: 30px;
+	margin-left: 25px;
+	float: left;
+
+	font-family: Ssemi;
+	font-size: 22px;
+	line-height: 150%;
+	color: white;
+
+	background: transparent;
+}
+
+.ConSoc{
+	width:50px;
+	height: 25px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: right;
+    margin-top: 4px;
+    margin-right: -25px;
+
+    background: transparent;
+}
+#imgSoc{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+/* EXCLAMAÇÃO -----------------*/
+
+
+
+
+/* NEWSLETTER -----------------*/
+.news{
+	width: 330px;
+	height: 135px;
+
+	float: left;
+	margin-left: 25%;
+	margin-top: -30px;
+	padding-left: 10;
+	padding-top: 10;
+	 
+	font-family: Ssemi;	
+	font-size: 28px; 
+	color:white;
+
+	background: rgba(46, 204, 113,0.8);
+}
+
+.per{
+	margin-left: 25px;
+	margin-top: 15px;
+}
+
+.rect{
+	width: 250px;
+
+	margin-top: 20px;
+	margin-left: 25px;
+
+	font-family: Sit;
+	font-size: 20px;
+	color: white;
+
+	background: none;
+	border-color: white;
+	
+	border:0.125em solid white;
+	padding-left:5; 
+}
+
+.but{
+	width:50px;
+	height: 10px;
+	margin-top: 20px;
+	margin-left: calc(60% - 20px);
+
+	font-family: Sbold;
+	font-size: 26px;
+	color: rgb(64,212,126);
+
+	cursor: pointer;
+	border: none;
+	background-color:transparent; 
+	border:0em solid white;
+}
+
+.but2{
+	position: absolute;
+	height: 35px;
+	width: 150px;
+	z-index: 10000;
+	background: white;
+	margin-top: -25px;
+	margin-left: calc(22% - 20px);
+	font-family: Sbold;
+	font-size: 26px;
+	color: rgb(64,212,126);
+	text-align: center;
+	padding-top: 10px;
+	cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+   color: white;
+   font-family: Sit;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: white;
+   font-family: Sit;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white; 
+   font-family: Sit; 
+}
+:-ms-input-placeholder {  
+   color: white;  
+   font-family: Sit;
+}
+/* NEWSLETTER -----------------*/
+
+
+
+
+
+/* MENSAGEM DOIS -----------------*/
+.messDois{
+	width:390px;
+	height: 100px;
+
+	float: right;
+	margin-top: 170px;
+
+	line-height: 150%;
+	text-align: center;
+	font-size: 24px;
+	font-family: Ssemi;
+	color: white;
+
+	background: rgba(52, 152, 219, 0.9);
+	z-index: 999999;
+}
+
+.btMessDois{
+	width:390px;
+	background: transparent;	
+}
+
+.txMessDois{
+	width:350px;
+
+	padding-top: 13px;
+	padding-bottom: 12px;
+	margin: auto;
+
+	background: transparent;
+}
+
+.ConTriDois{
+	width:80px;
+	height: 55px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-left: 20%;
+    margin-top: 20px;
+
+    background: transparent;
+}
+#imgTriDois{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+/* MENSAGEM DOIS -----------------*/
+/* SEGUNDO SLIDE ---------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TERCEIRO SLIDE ---------------------------------------------*/
+.sliTres{
+	width:80%;
+	height: 540px;
+
+	margin: auto;
+	margin-top: 200px;
+
+	background: transparent;
+}
+
+/* MENSAGEM TRES -----------------*/
+.messTres{
+	width:calc(100% - 450px);
+	float:left;
+
+	background: transparent;
+}
+
+.txMessTres{
+	width:400px;
+	height: 50px;
+
+	margin-left: 0px;
+	margin-top: 0px;
+	padding-top: 20px;
+
+	font-family: sSemi;
+	font-size: 24px;
+	text-align: center;
+	color: white;
+
+	background: rgba(52, 152, 219, 0.9);
+}
+/* MENSAGEM TRES -----------------*/
+
+/* SERVIÇOS -----------------*/
+.servi{
+	width:60%;
+	height: 440px;	
+
+	margin-top: 60px;
+	float: left;
+
+	background: transparent;
+}
+.edif{
+	width:154px;
+	height: 184px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-top: 30px;
+    margin-left: 10%;
+
+    background: transparent;
+	cursor:pointer;
+}
+.ConEd{
+	width:100%;
+	height: 180px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+	cursor:pointer;
+	margin: auto;
+}
+.ConEd :hover{
+	border: 2px solid white;
+}
+#imgEd{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.estr{
+	width:154px;
+	height: 184px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-top: 30px;
+    margin-left: 10%;
+
+    background: transparent;
+	cursor:pointer;
+}
+.ConEs{
+	width:100%;
+	height: 180px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+	cursor:pointer;
+	margin: auto;
+}
+.ConEs :hover{
+	border: 2px solid white;
+}
+#imgEs{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.munic{
+	width:154px;
+	height: 184px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-top: 35px;
+    margin-left: 20%;
+
+    background: transparent;
+	cursor:pointer;
+}
+.ConMun{
+	width:100%;
+	height: 180px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+	cursor:pointer;
+	margin-left: 2px;
+	margin-top: 2px;
+}
+.ConMun:hover{
+	border: 2px solid white;
+}
+#imgMun{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.agua{
+	width:154px;
+	height: 184px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-top: 35px;
+    margin-left: 10%;
+
+    background: transparent;
+	cursor:pointer;
+}
+.ConAg{
+	width:100%;
+	height: 180px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+	cursor:pointer;
+	margin: auto;
+}
+.ConAg :hover{
+	border: 2px solid white;
+}
+#imgAg{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+/* SERVIÇOS -----------------*/
+
+
+
+/* IMG PLANETA -----------------*/
+.planeta{
+	width:260px;
+	height: 340px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-left: 7%;
+    margin-top: 30px;
+
+    background: transparent;
+}
+#imgP{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+/* IMG PLANETA -----------------*/
+/* TERCEIRO SLIDE ---------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/* DESCRIÇÃO SERVIÇOS---------------------------------------------*/
+.desc1{
+	width:400px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 300px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+.titDesc1{
+	width: 95%;
+	margin: auto;
+	margin-top: 60px;
+	color:white;
+	font-family: Ssemi;
+	font-size: 20px;
+}
+.txDesc1{
+	width: 95%;
+	margin: auto;
+	margin-top: 20px;
+	color:white;
+	line-height: 140%;
+	font-family: Sreg;
+	display: none;
+}
+
+.desc2{
+	width:400px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 300px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+.titDesc2{
+	width: 95%;
+	margin: auto;
+	margin-top: 60px;
+	color:white;
+	font-family: Ssemi;
+	font-size: 20px;
+}
+.txDesc2{
+	width: 95%;
+	margin: auto;
+	margin-top: 20px;
+	color:white;
+	line-height: 140%;
+	font-family: Sreg;
+	display: none;
+}
+
+.desc3{
+	width:400px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 300px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+.titDesc3{
+	width: 95%;
+	margin: auto;
+	margin-top: 60px;
+	color:white;
+	font-family: Ssemi;
+	font-size: 20px;
+}
+.txDesc3{
+	width: 95%;
+	margin: auto;
+	margin-top: 20px;
+	color:white;
+	line-height: 140%;
+	font-family: Sreg;
+	display: none;
+}
+
+.desc4{
+	width:400px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 300px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+.titDesc4{
+	width: 95%;
+	margin: auto;
+	margin-top: 60px;
+	color:white;
+	font-family: Ssemi;
+	font-size: 20px;
+}
+.txDesc4{
+	width: 95%;
+	margin: auto;
+	margin-top: 20px;
+	color:white;
+	line-height: 140%;
+	font-family: Sreg;
+	display: none;
+}
+
+
+/* DESCRIÇÃO SERVIÇOS---------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE > 900px---------------------------------------------*/
+
+/*1165*/
+@media only screen and (max-width : 72.813em) {
+.conWrap{
+	width:100%;
+
+	position: absolute;
+	z-index: 100;
+	left: 0;
+	top: 8%;
+
+	background: transparent;
+}
+
+.messDois{
+	width:390px;
+	height: 100px;
+
+	float: left;
+	margin-top: 170px;
+	margin-left: 5%;
+
+	line-height: 150%;
+	text-align: center;
+	font-size: 24px;
+	font-family: Ssemi;
+	color: white;
+
+	background: rgba(52, 152, 219, 0.9);
+}
+
+.news{
+	width: 330px;
+	height: 135px;
+
+	float: left;
+	margin-left: 15%;
+	margin-top: -30px;
+	padding-left: 10;
+	padding-top: 10;
+	 
+	font-family: Ssemi;	
+	font-size: 28px; 
+	color:white;
+
+	background: rgba(46, 204, 113,0.8);
+}
+}
+
+
+
+
+/*990*/
+@media only screen and (max-width : 61.875em) {
+.sliTres{
+	width:90%;
+	height: 540px;
+
+	margin: auto;
+	margin-top: 200px;
+
+	background: transparent;
+}
+}
+
+/* RESPONSIVE > 900px---------------------------------------------*/
+
+
+
+
+/* RESPONSIVE > 650px---------------------------------------------*/
+/*900*/
+@media only screen and (max-width : 56.250em) {
+.menu{
+	position: fixed;
+	top:20px;
+	left: -40px;
+	width: 650px;
+	height: 35px;
+	z-index: 999999999999;
+}
+
+.um.fase2{
+	display: block;
+	-webkit-animation: opacidadeBt 0.5s;
+	-moz-animation: opacidadeBt 0.5s;
+	-o-animation: opacidadeBt 0.5s;
+	animation: opacidadeBt 0.5s;
+	background: rgba(40, 40, 40, 0.8);
+	float: left;
+	width: 35px;
+	height: 35px;
+}
+.quatro.fase2{
+	display: block;
+	-webkit-animation: opacidadeBtD 0.5s;
+	-moz-animation: opacidadeBtD 0.5s;
+	-o-animation: opacidadeBtD 0.5s;
+	animation: opacidadeBtD 0.5s;
+	background: rgba(80, 80, 80, 0.8);
+	float: left;
+	width: 35px;
+	height: 35px;
+}
+
+.seta{
+	width:15px;
+	height:15px;
+
+	margin-top: 10px;
+	margin-left: 10px;
+
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+}
+
+.logotipo{
+	width: 170px;
+	height: 35px;
+
+	top: 20px;
+	left: 20px;
+	z-index: 999999999999;
+	position: fixed;
+
+	background: rgba(0,0,0,0.8);
+}
+
+.conLog{
+	width:120px;
+	height:40px;
+
+	margin-top: 3px;
+	margin-left: calc(50% - 70px);
+
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+}
+#imgLog{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+    background: transparent;
+}
+
+.sliUm{
+	width:100%;
+	height: 560px;
+
+	margin-top: 60px;
+	background: transparent;
+}
+
+.repTres{
+	width:150px;
+	height: 150px;
+	position: absolute;
+	margin-top: 180px;
+	margin-left: 40%;
+	background: transparent;
+	display: none;
+}
+
+.repDois{
+	width:160px;
+	height: 150px;
+	position: absolute;
+	margin-left: 70%;
+	background: transparent;
+}
+
+.repQuatro{
+	width:170px;
+	height: 150px;
+	position: absolute;
+	margin-top: 180px;
+	margin-left: 35%;
+	background: transparent;
+}
+.repQuatro:hover > .ConDesQuatro{
+  -webkit-animation: nop;
+  -moz-animation: nop;
+  -o-animation: nop;
+  animation: nop;
+  background: rgba(192, 57, 43, 1);;
+}
+
+.repUm:hover > .ConDesUm{
+  -webkit-animation: nop;
+  -moz-animation: nop;
+  -o-animation: nop;
+  animation: nop;
+  background: rgba(192, 57, 43, 1);
+}
+.repDois:hover > .ConDesDois{
+  -webkit-animation: nop;
+  -moz-animation: nop;
+  -o-animation: nop;
+  animation: nop;
+  background: rgba(192, 57, 43, 1);
+}
+.repTres:hover > .ConDesTres{
+  -webkit-animation: nop;
+  -moz-animation: nop;
+  -o-animation: nop;
+  animation: nop;
+  background: rgba(192, 57, 43, 1);
+}
+
+.ConDesQuatro{
+	position: absolute;
+	margin-top: -40px;
+	width:150px;
+	height: 15px;
+	background: rgba(192, 57, 43, 0.8);
+	font-family: Ssemi;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+	display:none;
+}
+#imgDesQuatro{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+.ConRepQuatro{
+	width:40px;
+	height: 80px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin: auto;
+    margin-top: 20px;
+
+    background: transparent;
+
+    z-index: 1000;
+
+     cursor: pointer;
+}
+#imgRepQuatro{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.repDes1{
+	width:50%;
+	height: 270px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 46%;
+	margin-top: 120px;
+	background: rgba(192, 57, 43, 0.9);
+	display: none;
+}
+.txDes1{
+	width:90%;
+	height: 100px;
+	font-size: 18px;
+	font-family: Sreg;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.repDes2{
+	width:50%;
+	height: 260px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 41%;
+	margin-top: 150px;
+	background: rgba(192, 57, 43, 0.9);
+	display: none;
+}
+.txDes{
+	width:90%;
+	height: 100px;
+	font-size: 18px;
+	font-family: Sreg;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.repDes3{
+	width:40%;
+	height: 270px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 31%;
+	margin-top: 200px;
+	background: rgba(192, 57, 43, 0.9);
+	display: none;
+}
+.txDes3{
+	width:90%;
+	height: 100px;
+	font-size: 20px;
+	font-family: Sreg;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.repDes4{
+	width:300px;
+	height: 150px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 35%;
+	margin-top: 260px;
+	background: rgba(192, 57, 43, 0.9);
+	display: none;
+	cursor: pointer;
+}
+.txDes4{
+	width:240px;
+	height: 100px;
+	font-size: 20px;
+	font-family: Sreg;
+	color:white;
+	line-height: 130%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.messUm{
+	width:100%;
+	height: 100px;
+	margin-top: 0px;
+
+	line-height: 150%;
+	text-align: center;
+	font-size: 20px;
+	font-family: Ssemi;
+	color: white;
+
+	background: transparent;
+}
+
+.btMessUm{
+	width:230px;
+	margin-left: 10%;
+	float: left;
+}
+
+.txMessUm{
+	width:230px;
+
+	padding-top: 10px;
+	padding-bottom: 12px;
+	margin: auto;
+
+	background: rgba(46, 204, 113,0.8);
+}
+
+.messUmDois{
+	width:100%;
+	height: 100px;
+
+	line-height: 150%;
+	text-align: center;
+	font-size: 20px;
+	font-family: Ssemi;
+	color: white;
+
+	background: transparent;
+}
+
+.btMessUmDois{
+	width:350px;
+	margin-left: 50%;
+	margin-top: -130px;
+	float: left;
+}
+
+.txMessUmDois{
+	width:230px;
+
+	padding-top: 10px;
+	padding-bottom: 12px;
+	margin: auto;
+
+	background: rgba(52, 152, 219, 0.9);
+}
+
+
+
+
+
+
+
+.sliDois{
+	width:100%;
+	height: 530px;
+
+	margin: auto;
+	margin-top: 300px;
+
+	background: transparent;
+}
+
+.conAni{
+	width:360px;
+	height: 520px;
+	background: transparent;
+	margin-left: calc(50% - 180px);
+}
+
+.ConT1{
+	/*width do telemovel(ou foto) só é 220px*/
+	/*width:270px;*/
+	width:360px;
+	height: 360px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+
+    background: transparent;
+}
+.ConT2{
+	width:360px;
+	height: 360px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+
+    background: transparent;
+
+    display: none;
+}
+.ConT3{
+	width:360px;
+	height: 360px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+
+    background: transparent;
+
+    display: none;
+}
+
+.numeros{
+	width:220px;
+	height: 40px;
+	position: absolute;
+
+	margin-top: 332px;
+	margin-left: 200px;
+	font-family: Ssemi;
+	font-size: 30px;
+}
+
+.numUm{
+	width:40px;
+	color:white;
+	background: rgba(46, 204, 113,0.8);
+	text-align: center;
+}
+
+.numDois{
+	width:40px;
+	margin-left: 50px;
+	margin-top: -30px;
+	color: white;
+	background: rgba(46, 204, 113,0.8);
+	text-align: center;
+}
+
+.numTres{
+	width:40px;
+	margin-left: 100px;
+	margin-top: -30px;
+	color: white;
+	background: rgba(46, 204, 113,0.8);
+	text-align: center;
+}
+
+.news{
+	width: 280px;
+	height: 110px;
+
+	float: none;
+	margin-left: calc(-20% - 220px);
+	margin-top: 410px;
+	padding-left: 10;
+	padding-top: 20;
+	 
+	font-family: Ssemi;	
+	font-size: 22px; 
+	color:white;
+
+	background: rgba(46, 204, 113,0.8);
+}
+
+.per{
+	margin-left: 25px;
+	margin-top: 45px;
+	padding-top: 10px;
+}
+
+.rect{
+	width: 230px;
+
+	margin-top: 10px;
+	margin-left: 25px;
+
+	font-family: Ssemi;
+	font-size: 20px;
+	color: white;
+
+	background: none;
+	border-color: white;
+	
+	border:0.125em solid white;
+	padding-left:5; 
+}
+
+.but{
+	width:50px;
+	height: 10px;
+	margin-top: 20px;
+	margin-left: calc(60% - 20px);
+
+	font-family: Sbold;
+	font-size: 26px;
+	color: rgb(64,212,126);
+
+	cursor: pointer;
+	border: none;
+	background-color:white; 
+	border:0.125em solid white;
+	opacity: 0;
+}
+
+.but2{
+	position: absolute;
+	height: 35px;
+	width: 150px;
+	z-index: 10000;
+	background: white;
+	margin-top: -25px;
+	margin-left: calc(22% - 20px);
+	font-family: Sbold;
+	font-size: 26px;
+	color: rgb(64,212,126);
+	text-align: center;
+	padding-top: 10px;
+	cursor: pointer;
+}
+
+.messDois{
+	width:270px;
+	height: 90px;
+
+	float: none;
+	margin-top: -50px;
+	margin-left: 2%;
+
+	line-height: 150%;
+	text-align: center;
+	font-size: 18px;
+	font-family: Ssemi;
+	color: white;
+
+	background: rgba(52, 152, 219, 0.9);
+}
+
+.btMessDois{
+	width:270px;
+	background: transparent;	
+}
+
+.txMessDois{
+	width:260px;
+
+	padding-top: 13px;
+	padding-bottom: 25px;
+	margin: auto;
+
+	background: transparent;
+}
+
+.triDois{
+	margin-top: -10px;
+}
+
+body {
+    height: 2700px;
+}
+
+.sliTres{
+	width:90%;
+	height: 540px;
+
+	margin: auto;
+	margin-top: 450px;
+
+	background: transparent;
+}
+
+.txMessTres{
+	width:400px;
+	height: 30px;
+
+	margin-left: 0px;
+	margin-top: 0px;
+	padding-top: 10px;
+
+	font-family: sSemi;
+	font-size: 22px;
+	text-align: center;
+	color: white;
+
+	background: rgba(52, 152, 219, 0.9);
+}
+
+.servi{
+	width:95%;
+	height: 440px;	
+
+	margin-top: 170px;
+
+	float: left;
+
+	background: yellow;
+}
+.edif{
+	width:154px;
+	height: 184px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-top: 30px;
+    margin-left: 10%;
+
+    background: transparent;
+	cursor:pointer;
+}
+.ConEd{
+	width:100%;
+	height: 180px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+	cursor:pointer;
+	margin: auto;
+}
+.ConEd :hover{
+	border: 2px solid white;
+}
+#imgEd{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.estr{
+	width:154px;
+	height: 184px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-top: 30px;
+    margin-left: 10%;
+
+    background: transparent;
+	cursor:pointer;
+}
+.ConEs{
+	width:100%;
+	height: 180px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+	cursor:pointer;
+	margin: auto;
+}
+.ConEs :hover{
+	border: 2px solid white;
+}
+#imgEs{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.munic{
+	width:154px;
+	height: 184px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-top: 35px;
+    margin-left: 20%;
+
+    background: transparent;
+	cursor:pointer;
+}
+.ConMun{
+	width:100%;
+	height: 180px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+	cursor:pointer;
+	margin-left: 2px;
+	margin-top: 2px;
+}
+.ConMun:hover{
+	border: 2px solid white;
+}
+#imgMun{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.agua{
+	width:154px;
+	height: 184px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-top: 35px;
+    margin-left: 10%;
+
+    background: transparent;
+	cursor:pointer;
+}
+.ConAg{
+	width:100%;
+	height: 180px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+	cursor:pointer;
+	margin: auto;
+}
+.ConAg :hover{
+	border: 2px solid white;
+}
+#imgAg{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.planeta{
+	width:30%;
+	height: 280px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-left: 65%;
+    margin-top: -600px;
+
+    background: transparent;
+}
+
+.desc1{
+	width:350px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 230px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+
+.desc2{
+	width:350px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 230px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+
+.desc3{
+	width:350px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 230px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+
+.desc4{
+	width:350px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 230px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+}
+/* RESPONSIVE > 650px---------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE < 650px---------------------------------------------*/
+/*650*/
+@media only screen and (max-width : 40.625em) {
+.messUm {
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 3s;
+  -webkit-animation-duration:1s;
+  -webkit-animation-delay:3s;
+}
+
+.messUmDois {
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 3s;
+  -webkit-animation-duration:1s;
+  -webkit-animation-delay:3s;
+}
+
+
+body {
+    height: 3000px;
+}
+
+.menu{
+	position: fixed;
+	top:10px;
+	left: -50px;
+	width: 650px;
+	height: 50px;
+	z-index: 999999999999;
+}
+
+.logotipo{
+	width: 170px;
+	height: 35px;
+
+	top: 10px;
+	left: 10px;
+	z-index: 999999999999;
+	position: fixed;
+
+	background: rgba(0,0,0,0.8);
+}
+
+.sliUm{
+	width:100%;
+	height: 560px;
+
+	margin-top: 30px;
+	background: transparent;
+}
+.sliDois{
+	width:100%;
+	height: 530px;
+
+	margin: auto;
+	margin-top: 130px;
+
+	background: transparent;
+}
+.sliTres{
+	width:100%;
+	height: 540px;
+
+	margin: auto;
+	margin-top: 530px;
+
+	background: transparent;
+}	
+
+.repDois{
+	width:160px;
+	height: 150px;
+	position: absolute;
+	margin-left: 70%;
+	background: transparent;
+	display: none;
+}
+
+.repQuatro{
+	width:140px;
+	height: 150px;
+	position: absolute;
+	margin-top: 30px;
+	margin-left: 50%;
+	background: transparent;
+	display: none;
+}
+
+.repUm{
+	width:160px;
+	height: 150px;
+	position: absolute;
+	margin-top: 0px;
+	margin-left: calc(65% - 80px);
+	background: transparent;
+}
+
+.ConRepUm{
+	width:40px;
+	height: 80px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin: auto;
+    margin-top: 30px;
+
+    background: transparent;
+
+    z-index: 1000;
+
+    cursor: pointer;
+}
+
+.ConDesUm{
+	position: absolute;
+	margin-top: -30px;
+	width:150px;
+	height: 15px;
+	background: rgba(192, 57, 43, 0.8);
+	font-family: Ssemi;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+	display: none;
+}
+
+.repUm:hover > .ConDesUm{
+	-webkit-animation: opacidade 1s;
+  -moz-animation: opacidade 1s;
+  -o-animation: opacidade 1s;
+  animation: opacidade 1s;
+  background: rgba(192, 57, 43, 1);
+}
+
+.repDes1{
+	width:64%;
+	height: 270px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 34%;
+	margin-top: 130px;
+	background: rgba(192, 57, 43, 0.9);
+	display: none;
+}
+
+.txDes{
+	width:95%;
+	height: 100px;
+	font-size: 15px;
+	font-family: Sreg;
+	color:white;
+	line-height: 130%;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.ConProb{
+	width:30%;
+	height: 300px;
+	display:block; 
+    position:absolute;
+    overflow:hidden;
+    z-index: 9999;
+    margin-left: 2%;
+    margin-top: 130px;
+
+    background: transparent;
+    display: none;
+}
+
+.messUm{
+	width:100%;
+	height: 100px;
+	margin-top: -200px;
+
+	line-height: 150%;
+	text-align: center;
+	font-size: 16px;
+	font-family: Ssemi;
+	color: white;
+
+	background: transparent;
+}
+
+.btMessUm{
+	width:170px;
+	margin-left: 5%;
+	float: left;
+}
+
+.txMessUm{
+	width:170px;
+
+	padding-top: 10px;
+	padding-bottom: 12px;
+	margin: auto;
+
+	background: rgba(46, 204, 113,0.8);
+}
+
+.Contri{
+	width:60px;
+	height: 55px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-left: 50%;
+    margin-top: 10px;
+
+    background: transparent;
+}
+
+.messUmDois{
+	width:100%;
+	height: 100px;
+
+	line-height: 150%;
+	text-align: center;
+	font-size: 16px;
+	font-family: Ssemi;
+	color: white;
+
+	background: transparent;
+}
+
+.btMessUmDois{
+	width:160px;
+	margin-left: 42%;
+	margin-top: -10px;
+	float: left;
+}
+
+.txMessUmDois{
+	width:160px;
+
+	padding-top: 10px;
+	padding-bottom: 12px;
+	margin: auto;
+
+	background: rgba(52, 152, 219, 0.9);
+}
+
+.triangulo2{
+	width:60px;
+	height: 55px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-left: 15%;
+    margin-top: 10px;
+
+    background: transparent;
+}
+
+
+
+.triDois{
+	margin-top: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.conAni{
+	width:280px;
+	height: 520px;
+	background: transparent;
+	margin-left: calc(50% - 140px);
+}
+
+.ConT1{
+	/*width do telemovel(ou foto) só é 220px*/
+	/*width:270px;*/
+	width:280px;
+	height: 280px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+
+    background: transparent;
+}
+.ConT2{
+	width:280px;
+	height: 280px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+
+    background: transparent;
+
+    display: none;
+}
+.ConT3{
+	width:280px;
+	height: 280px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+
+    background: transparent;
+
+    display: none;
+}
+
+.numeros{
+	width:220px;
+	height: 40px;
+	position: absolute;
+
+	margin-top: 259px;
+	margin-left: 110px;
+	font-family: Ssemi;
+	font-size: 22px;
+}
+
+.numUm{
+	width:30px;
+	color:white;
+	background: rgba(46, 204, 113,0.8);
+	text-align: center;
+}
+
+.numDois{
+	width:30px;
+	margin-left: 50px;
+	margin-top: -22px;
+	color: white;
+	background: rgba(46, 204, 113,0.8);
+	text-align: center;
+}
+
+.numTres{
+	width:30px;
+	margin-left: 100px;
+	margin-top: -22px;
+	color: white;
+	background: rgba(46, 204, 113,0.8);
+	text-align: center;
+}
+
+.afeWrap{
+	height: 300px;
+	width:100%;
+	margin-left: 0px;
+	margin-top: 300px;
+
+	position: absolute;
+	background: transparent;
+}
+
+.news{
+	width: 220px;
+	height: 100px;
+
+	float: none;
+	margin-left: 10%;
+	margin-top: 0px;
+	padding-left: 10;
+	padding-top: 20;
+	 
+	font-family: Ssemi;	
+	font-size: 20px; 
+	color:white;
+
+	background: rgba(46, 204, 113,0.8);
+}
+
+.per{
+	margin-left: 10px;
+	margin-top: 45px;
+	padding-top: 10px;
+}
+
+.rect{
+	width: 190px;
+
+	margin-top: 10px;
+	margin-left: 10px;
+
+	font-family: Ssemi;
+	font-size: 20px;
+	color: white;
+
+	background: none;
+	border-color: white;
+	
+	border:0.125em solid white;
+	padding-left:5; 
+}
+
+.but{
+	width:50px;
+	height: 10px;
+	margin-top: 20px;
+	margin-left: calc(60% - 20px);
+
+	font-family: Sbold;
+	font-size: 26px;
+	color: rgb(64,212,126);
+
+	cursor: pointer;
+	border: none;
+	background-color:white; 
+	border:0.125em solid white;
+}
+
+.but2{
+	position: absolute;
+	height: 35px;
+	width: 150px;
+	z-index: 10000;
+	background: white;
+	margin-top: -25px;
+	margin-left: calc(15% - 20px);
+	font-family: Sbold;
+	font-size: 26px;
+	color: rgb(64,212,126);
+	text-align: center;
+	padding-top: 10px;
+	cursor: pointer;
+}
+
+.messDois{
+	width:240px;
+	height: 80px;
+
+	float: none;
+	margin-top: 80px;
+	margin-left: calc(45% - 80px);
+
+	line-height: 150%;
+	text-align: center;
+	font-size: 16px;
+	font-family: Ssemi;
+	color: white;
+
+	background: rgba(52, 152, 219, 0.9);
+}
+
+.btMessDois{
+	width:240px;
+	background: transparent;	
+}
+
+.txMessDois{
+	width:240px;
+
+	padding-top: 13px;
+	padding-bottom: 25px;
+	margin: auto;
+
+	background: transparent;
+}
+
+.ConTriDois{
+	width:60px;
+	height: 55px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    margin-left: 10%;
+    margin-top: 5px;
+
+    background: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.txMessTres{
+	width:200px;
+	height: 45px;
+
+	margin-left: 30%;
+	margin-top: 0px;
+	padding-top: 10px;
+
+	font-family: sSemi;
+	font-size: 18px;
+	text-align: center;
+	color: white;
+
+	background: rgba(52, 152, 219, 0.9);
+}
+
+.servi{
+	width:100%;
+	height: 440px;	
+
+	margin-top: 80px;
+
+	float: left;
+
+	background: transparent;
+}
+.edif{
+	width:130px;
+	height: 184px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-top: 30px;
+    margin-left: calc(50% - 65px);
+
+    background: transparent;
+	cursor:pointer;
+	pointer-events: none;
+}
+.ConEd{
+	width:100%;
+	height: 180px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+	cursor:pointer;
+	margin: auto;
+}
+.ConEd :hover{
+	border: 2px solid white;
+}
+#imgEd{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.estr{
+	width:130px;
+	height: 184px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-top: 30px;
+    margin-left: calc(50% - 65px);
+
+    background: transparent;
+	cursor:pointer;
+	pointer-events: none;
+}
+.ConEs{
+	width:100%;
+	height: 180px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+	cursor:pointer;
+	margin: auto;
+}
+.ConEs :hover{
+	border: 2px solid white;
+}
+#imgEs{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.munic{
+	width:130px;
+	height: 184px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-top: 35px;
+    margin-left: calc(50% - 65px);
+
+    background: transparent;
+	cursor:pointer;
+	pointer-events: none;
+}
+.ConMun{
+	width:100%;
+	height: 180px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+	cursor:pointer;
+	margin-left: 2px;
+	margin-top: 2px;
+}
+.ConMun:hover{
+	border: 2px solid white;
+}
+#imgMun{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.agua{
+	width:130px;
+	height: 184px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-top: 35px;
+    margin-left: calc(50% - 65px);
+
+    background: transparent;
+	cursor:pointer;
+	pointer-events: none;
+}
+.ConAg{
+	width:100%;
+	height: 180px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    background: transparent;
+	cursor:pointer;
+	margin: auto;
+}
+.ConAg :hover{
+	border: 2px solid white;
+}
+#imgAg{
+	position:absolute;
+    top:0;
+    left:0; 
+    width:100%;
+}
+
+.planeta{
+	width:150px;
+	height: 280px;
+	display:block; 
+    position:relative;
+    overflow:hidden;
+
+    float: left;
+    margin-left: calc(70% - 75px);
+    margin-top: -680px;
+
+    background: transparent;
+}
+
+.desc1{
+	width:350px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 230px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+
+.desc2{
+	width:350px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 230px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+
+.desc3{
+	width:350px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 230px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+
+.desc4{
+	width:350px;
+	height: 400px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 230px;
+	margin-top: 30px;
+	background: rgba(52, 152, 219, 0.9);
+	display: none;
+}
+
+}
+/* RESPONSIVE < 650px---------------------------------------------*/

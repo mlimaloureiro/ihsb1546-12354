@@ -1,0 +1,16 @@
+{% extends "mobile/base.html" %}
+
+{% block content %}
+	<h1>MapMoth Login</h1>
+	<form class="login section" action="/login/" method="post">
+		<p>
+			<label for="username">Username</label>
+			<input type="text" name="username" class="username" />
+		</p>
+		<p><label for="username">Password</label>
+		<input type="password" name="password" class="password"/>
+		</p>
+		<button>Entrar</button>
+		{% csrf_token %}
+	</form>
+{% endblock %}

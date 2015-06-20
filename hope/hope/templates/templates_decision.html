@@ -1,0 +1,183 @@
+<script type="text/html" id="decision-page-template">
+
+    <div id="decision-page">
+
+    <div class="row-fluid">
+
+        <div class="span12">
+            <div class="row-fluid"> 
+	            <div class="span12" style="margin-left:0px;">
+
+	            	<div class="alert alert-warning">
+  						<button type="button" class="close" data-dismiss="alert">×</button>
+  						<h4 style="margin-bottom:5px;">Let us give you some hints!</h4> <p style="margin-bottom:1px;">This is a decision support system that will help you make your choices.</p>
+  						<p style="margin-bottom:1px;"> You just need to select your type of report, choose how much importance you want to give for each field, or even if you want to consider it! For last, just choose the algorithm you want to use. </p>
+  						<p style="margin-bottom:1px;"> Your scores will be displayed below. Find more info <a href="http://kreation.dec.uc.pt/projects/sperobox/" target="_blank">here.</a></p>
+					</div>
+
+	            	<div class="span3" style="margin-left:0px;">
+	            		<div class="box" id="decision-container">
+	            			
+						    <div class="box-content" >
+						    	<div class="row-fluid box-section"><h5>Categories</h5><small id="decision_cat_hier"></small></div>
+						    	<div class="row-fluid box-section" id="decision-box">
+						    		<div id="decision_list_div" style="width:100%;">
+										
+									</div>
+
+									<div id="sliders" style="display:none;margin-top:10px;">
+									    
+									</div>
+
+									<div style="margin-top:10px;">
+										<select name="category" id="algorithm-decision" class="chzn-select span8" style="margin-top:20px;">
+											<option name="PesagemSimples" value='0'>Simple Weighting Sum</option>
+											<option name="TOPSIS" value='1'>TOPSIS</option>
+										</select>
+										<button class="btn btn-default span2" id="equal-sliders">=</i></button>
+										<button class="btn btn-default span2" id="refresh-algorithm"><i class="icon-refresh"></i></button>
+									</div>
+									
+									<!--<div style="margin-top:10px;">
+                        				<input type="checkbox" class="icheck" id="livecheck">
+                        				<label for="livecheck">live <small><span class="label label-red">alpha</span></small></label>
+                      				</div>-->
+
+                      				<div>
+                      				
+									<button class="btn btn-default span12" id="export-csv-btn" style="margin-top:10px;">export csv</button>
+									</div>
+									
+						    	</div>	
+						    </div>
+		            	</div>
+
+		            	<div style="display:none;" class="input-prepend" style="margin-bottom:5px;" id="quick-search-div" >
+							    <a class="add-on" href="#" onclick="return false;">
+							        <i class="icon-search"></i>
+							    </a>
+					      		<input type="text" id="quick-search-decision" placeholder="Quick search ..."/>
+					    </div>
+
+						<div class="box" id="occ-list-box" style="display:none;">
+
+						    <div class="row-fluid box-section"><div class="span6"><h5>Occurrences</h5></div><div class="span6"><h5 id="number_occs" align="right"></h5></div></div>
+						    <div class="box-content scrollable" id="decision-box-list" style="overflow-y: auto;">
+
+						
+						    </div>
+						</div>
+					</div>
+
+		            
+		            <div class="span9">
+
+		            	
+
+                        <div class="box">
+                        	<div class="box-content" style="border:0">
+                        	 	
+	          					<div class="tab-content" id="decision_map" style="height:550px;">
+            						
+	                			</div>                       
+                       		</div>
+                    	</div>
+
+                    	<div>
+	                		<div class="box" id="box-moredetails" style="display:none;">
+	                			<div class="box-content" style="border:0; padding:20px;" align="center">
+	                				<a href="#" onclick="return false;" id="moredetails-btn">Click to see more details</a>
+	                			</div>
+	                		</div>
+                		</div>
+
+                    	<div id="matrix-box">
+	                	    <div id="moutput-box" class="box span6" style="display:none;">
+	                        	<div  class="box-content" style="border:0;">
+	                        	 	<div class="row-fluid box-section"><h5>Decision Matrix</h5></div>
+		          					<div class="tab-content" id="matriz_output" style="margin:10px;">
+	            						
+		                			</div>                       
+	                       		</div>
+	                    	</div>
+	                    	<div id="mpesada-box" class="box span6"  style="display:none;">
+	                        	<div class="box-content" style="border:0;">
+	  								<div class="row-fluid box-section"><h5>Weighted Normalized Decision Matrix</h5></div>
+		          					<div class="tab-content" id="matriz_pesada" style="margin:10px;">
+	            						
+		                			</div>                       
+	                       		</div>
+	                    	</div>
+                    	</div>
+
+                    	
+
+                	</div>
+
+                	
+
+                	<div id="occ-modal">
+
+                	</div>
+	        </div>
+		</div>
+    </div>
+    </div>
+</script>
+
+<script type="text/html" id="decision-categories-list">
+	<select name="category" id="decision_cat_select" class="chzn-select">
+
+		<% _.each(cat, function(index) { %>
+			<% if (index.bullshit != 1) { %>
+			<%= "<option id='" + index.attr.id + "' name="+index.data+" value='" + index.attr.id + "'> " + index.data + "</option>" %>	
+			<% } %>		
+		<% }); %>
+	</select>
+</script>
+
+<script type="text/html" id="occ-modal-template">
+	<div id='occ_modal' class="modal fade hide" style="height:auto;">
+		<div class="modal-header">
+    		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    	<h6 id="modal-occLabel"><%= title %></h6>
+  		</div>
+
+  		<div class="modal-body" style="max-height:600px;">
+  			
+	  		<h5><strong>Description</strong></h5><%= description %>
+	  		<h5><strong>Coordinates</strong></h5><%= coordinate %><p>
+	  		<div id="modal-map" style="height:300px;">
+
+	  		</div>
+	  		<div id="photos-modal-div" style="height:auto;">
+	  			<ul class="thumbnails" id="modal-photos" style="margin-top:10px;">
+	  				<% for (var i = 0; i < photos.length; i++) { %>
+	  					<li class="span4" style="margin-left:0px;margin-right:7px;margin-bottom:7px;max-width:100px;">
+		  					<a href="http://webmoth.dec.uc.pt/static/<%= photos[i].path_big %>" target="_blank" class="thumbnail">
+		  					<img data-src="http://webmoth.dec.uc.pt/static/<%= photos[i].path_small %>" src="http://webmoth.dec.uc.pt/static/<%= photos[i].path_small %>">
+		  					</a>
+	  					</li>
+	  				<% }; %>
+				</ul>
+	  		</div>
+	  		
+     	</div>
+	</div>
+</script>
+
+<script type='text/html' id='decision_item'> 
+
+	<div class="box-section news with-icons decision_class_search" id="box-occs" data-rel="<%= id %>" style="padding:5px 10px 10px 10px;min-height:25px;">
+		<a href="#" onclick="return false;" rel="<%= id %>" data-placement="top" data-original-title="" class="<%= selected == true ?  'avatar green occ_selected' : 'avatar cyan' %>"><i class="<%= selected == true ? 'icon-ok icon-2x' : 'icon-remove icon-2x' %>"></i></a>
+	  	<div class="news-time">
+	    	<span style="<%= color != 0 ? 'color:'+color+';' : '' %>"><%= score %></span>
+	 	</div>
+		<div class="news-content">
+	    	<div class="news-title" style="font-size:14px;"><a class="dss_item" rel="<%= id %>"><%= name %></a></div>
+	    	<div class="news-text">
+	      		 <%= category_name %> - <span class="timestamps"><%= created_at %></span>
+	    	</div>
+	  	</div>
+	</div>
+</script>

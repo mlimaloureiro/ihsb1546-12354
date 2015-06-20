@@ -1,0 +1,26 @@
+html{
+	background: #fff;
+}
+
+body{
+	background:none;
+}
+
+/*------------------------------------*\
+	MOBILE
+\*------------------------------------*/
+/*
+CSS for mobile devices.
+Linearise it!
+*/
+
+
+
+
+
+@media (max-width: 720px){
+body{
+	font-size:0.75em;
+}
+}
+/*--- END MOBILE ---*/

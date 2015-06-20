@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Overview &mdash; Sperobox 1.0a documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Sperobox 1.0a documentation" href="index.html" />
+    <link rel="prev" title="Welcome to Sperobox’s documentation!" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Sperobox’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Sperobox 1.0a documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>Sperobox is a <strong>distributed application</strong> that makes use of different machines, which allow it to be scalable. It&#8217;s also built on a variety of different technologies on which the team consider it offers the best production stack for the projects end.</p>
+<p>The project follows strictly the <strong>Separation of Concerns</strong> (SoC) design principle which leads us to the need of having deep knowledge of <em>Software Design Patterns</em> and terms like, <em>frontend engineering</em>, <em>backend engineering</em>, <em>DRY</em>, <em>MVC</em>, <em>CORS</em>, etc... should be familiar to you.</p>
+<div class="section" id="physical-production-stack">
+<h2>Physical Production Stack<a class="headerlink" href="#physical-production-stack" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>MAIN        - moth.dec.uc.pt</strong></dt>
+<dd><p class="first last">Machine responsible to host the code that controls the application flow.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>BD  - bdmoth.dec.uc.pt</strong></dt>
+<dd><p class="first last">Machine responsible to host the DBMS engines ( MongoDB and MySQL ). It is deeply connected to the main machine.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>CDN - webmoth.dec.uc.pt</strong></dt>
+<dd><p class="first last">Machine responsible to host the static contents of the application. HTML files, pictures, etc... are hosted in this machine.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="technologies">
+<h2>Technologies<a class="headerlink" href="#technologies" title="Permalink to this headline">¶</a></h2>
+<p>All servers are running on Debian linux distributions.</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>List of Backend services used in all machines</strong></dt>
+<dd><ul class="first last simple">
+<li>nginx as HTTP server</li>
+<li>Python as the scripting language</li>
+<li>Django Framework</li>
+<li>PHP</li>
+<li>MongoDB</li>
+<li>MySQL</li>
+<li>Git</li>
+<li>Vagrant</li>
+<li>Puppet</li>
+<li>Sphynx</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Frontend</strong></dt>
+<dd><ul class="first last simple">
+<li>Javascript</li>
+<li>Backbone.js</li>
+<li>Underscore.js</li>
+<li>jQuery.js</li>
+<li>(other dependencies)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="deployment">
+<h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h2>
+<p>Production deployment is made from a shell script that deeply uses git services.
+All the code is hosted on GitHub.</p>
+</div>
+<div class="section" id="installation-and-contribution">
+<h2>Installation and Contribution<a class="headerlink" href="#installation-and-contribution" title="Permalink to this headline">¶</a></h2>
+<p>To contribute to Sperobox development, you should <em>git clone</em> the project repository, <strong>create the vagrant box</strong> and run the provision provided in. After you have your development environment ready, you can start coding and submitting pull requests to the repository.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Overview</a><ul>
+<li><a class="reference internal" href="#physical-production-stack">Physical Production Stack</a></li>
+<li><a class="reference internal" href="#technologies">Technologies</a></li>
+<li><a class="reference internal" href="#deployment">Deployment</a></li>
+<li><a class="reference internal" href="#installation-and-contribution">Installation and Contribution</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to Sperobox&#8217;s documentation!</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/Overview.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Sperobox’s documentation!"
+             >previous</a> |</li>
+        <li><a href="index.html">Sperobox 1.0a documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, INESCC.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
+    </div>
+  </body>
+</html>

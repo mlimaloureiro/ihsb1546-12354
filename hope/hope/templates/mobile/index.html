@@ -1,0 +1,12 @@
+{% extends "mobile/base.html" %}
+
+{% block content %}
+<h1>MapMoth</h1>
+{% if success %}
+<div class="success message">Operação efectuada com sucesso</div>
+{% endif %}
+<ul>
+	<li><a href="occurrence"> Occorrencias </a></li>
+	<li><a href="logout/"> Sair </a></li>
+</ul>
+{% endblock %}

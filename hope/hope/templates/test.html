@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block extrahead%}
+
+<script src="{{ MEDIA_URL }}main/js/views/Data/CollectionViewer.js" type="text/javascript" charset="utf-8"> </script>
+
+{% endblock %}
+
+
+
+{% block extracontent %}
+
+<script type="text/javascript">
+	$(function(){
+		var cv = new CollectionViewer();
+
+		$("#map-middle-east").append(cv.el);
+
+		$(cv.el).trigger("loadView", new CollectionViewer());
+	});
+</script>
+
+{% endblock %}

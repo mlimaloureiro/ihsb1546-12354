@@ -1,0 +1,52 @@
+    <div class="navbar navbar-top navbar-inverse">
+        <div class="navbar-inner" style="border:none;">  
+            <div class="container-fluid">
+
+                <!-- the new toggle buttons -->
+                <a class="brand" href="#report"> <img src="https://dl.dropboxusercontent.com/u/5427257/logo_spero.png"> </a>
+                <ul class="nav pull-right"  style="color:#fff">
+                    <li class="toggle-primary-sidebar hidden-desktop" data-toggle="collapse" data-target=".nav-collapse-primary">
+                        <a><i class="icon-th-list"></i></a>
+                    </li>
+
+                    <li class="collapsed hidden-desktop" data-toggle="collapse" data-target=".nav-collapse-top">
+                        <a><i class="icon-align-justify"></i></a>
+                    </li>
+                </ul>
+          
+
+                <div class="nav-collapse nav-collapse-top">
+
+                    <ul class="nav full pull-right">
+                        <li class="dropdown user-avatar" style="color:#fff">
+
+                            <!-- the dropdown has a custom user-avatar class, this is the small avatar with the badge -->
+
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                <span> <span style="color:#fff">{{user.username}} <i class="icon-caret-down"></i></span> </span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                              <!-- the first element is the one with the big avatar, add a with-image class to it -->
+                                <li><a href="#user"><i class="icon-cog"></i> <span>Profile</span></a></li>
+                                <li><a href="/hope/logout"><i class="icon-off"></i> <span>Logout</span></a></li>
+                            
+                            </ul>
+                        </li>
+                    </ul> 
+
+
+                    <ul class="pull-left nav full">
+                        <!--
+                        {% if user.is_superuser %}
+                            <li style="color:#fff"><a href="#manage" title="manage"> Manage</a></li>
+                            <li style="color:#fff"><a href="#groups" title="Groups"> Groups</a></li>
+                        {% endif %}
+                        -->
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>

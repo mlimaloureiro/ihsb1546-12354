@@ -1,0 +1,75 @@
+<script type="text/html" id="profile-page-template">
+	<div id="profile-page">
+		<div class="row-fluid">
+			<div class="span12" id="activity-fluid-box">
+				<div class="box" id="box-profile" style="display:none;">	
+					<div class="box-content">
+						<div class="row-fluid box-section" id="activity-header">
+							
+						</div>
+					</div>
+				</div>
+				<div id="activity-fluid">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+
+<script type="text/html" id="row-activity">
+
+<div class="span3 feedcol" style="display:none">
+	<div style="border:0px;">
+		<div class="feed-box" style="padding:0px; border:1px solid transparent; border-radius:5px;">
+			<div class="feed-title" style="padding:10px; background:#fbfbfb; border:1px solid #cdcdcd;">
+				<strong style="font-size:18px;"><a href="#report/<%= main.report_id %>"><%=report_title %></strong></a><br>
+				<small><%= time %></small>
+			</div>
+			<div class="feed-content" style="padding:0px; background:url(<%= photo %>); height:150px; background-size:100%; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; position:relative; cursor:pointer;" onclick="window.location.href='#report/<%=main.report_id %>'">
+				<div class="feed-content-bottom" style="position: absolute; width:94%; bottom:0px; left:0px; padding:10px; background-color: rgba(0, 0, 0, 0.6); border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em;">
+					<span style="color:white; font-size:12px;"><a href="#user/<%= main.user_id %>"><strong>@<%= main.username %></strong></a> <%= feedMessage[main.type] %></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="feed-activity" style="margin-top:10px;">
+		<% if (feed.length > 0)  { %> <strong style="font-size:14px;">Lastest activity:</strong> <% } %>
+
+		<% _.each(feed, function(activity) { %>
+			<div class="feed-activity-content">
+				<div class="row-fluid" style="margin-top:5px;">
+					<div class="span2" style="padding:5px;">
+						<a href="#"><img src="http://placehold.it/100x100&text=user%20pic" width="100%"></img></a>
+					</div>
+					<div class="span10" style="padding:5px;">
+						<a href="#user/<%= activity.user_id %>"><strong style="font-size:14px;">@<%=activity.username %></strong></a> <%=feedMessage[activity.type] %> on <%=activity.time %>
+					</div>
+				</div>
+			</div>
+		<% });%>
+	</div>
+</div>
+</script>
+
+<script type="text/html" id="user-profile">
+	<div class="span4 pull-left" style="margin-top:5px;">
+	<h4><strong><%= username %></strong></h4>
+
+</div>
+<div class="span8">
+	<ul class="inline pull-right sparkline-box">
+		<li class="sparkline-row" style="padding-right:0px;">
+			<h4><div id="reports-counter-user"> <%= reports %> </div> <span>Reports</span></h4>
+		</li>
+
+		<li class="sparkline-row" style="padding-right:0px;cursor:pointer">
+			<h4><div id="following-counter-user"> <%= following %> </div> <span>Following</span></h4>
+		</li>
+
+		<li class="sparkline-row" style="padding-right:0px;cursor:pointer">
+			<h4><div id="followers-counter-user"> <%= followers %></div> <span>Followers</span></h4>
+		</li>
+	</ul>
+</div>
+</script>

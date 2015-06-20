@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SPERO</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+	<!-- CSS at the top -->
+    <!-- for testing -->
+    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}landingpage/css/style.css" media="screen, handheld" />
+	<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}landingpage/css/animate.css">
+
+	<!-- for production 
+	<link rel="stylesheet" type="text/css" href="css/combined070514.min.css">-->
+
+	<!-- Google maps api -->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+</head>
+
+
+<body>
+	<!-- Map canvas -->
+	<div id="map" class="fullWidth"></div>
+
+		<div class="logotipo">
+			<div class="conLog">
+				<img id="imgLog" src="{{ MEDIA_URL }}landingpage/img/logo.png" />
+			</div>	
+		</div>
+	<!-- logotipo -->
+
+	<!-- Content container -->
+	<div class="content-container">
+
+		<!-- Menu -->
+		<div class="menu">
+		<!-- 
+				<div class="um" style="cursor: pointer">
+					<div class="conSpe">
+						<img id="imgSpe" src="img/logo.png" />
+					</div>	
+				</div>
+		-->		
+				<div class="um" style="cursor: pointer">
+					<div class="seta">
+						<img id="imgBaixo" src="{{ MEDIA_URL }}landingpage/img/baixo.png" />
+					</div>
+				</div>
+
+				<div class="quatro" style="cursor: pointer">
+					<div class="seta">
+						<img id="imgCima" src="{{ MEDIA_URL }}landingpage/img/cima.png" />
+					</div>
+				</div>
+		<!-- 
+				<div class="tres tres2" style="cursor: pointer">
+					<div class="setCima">
+						<img id="imgCima" src="img/cima.png" />
+					</div>
+				</div>
+		-->					
+		</div><!-- menu -->
+
+		<div class="conWrap">
+			<!-- Wrap -->
+			<div class="wrap">
+				<div class="sliUm">
+					<div class="ConRep">
+						<div class="repUm">
+							<div class="ConDesUm">Pothole.</div>
+
+							<div class="ConRepUm">
+								<img id="imgRepUm" src="{{ MEDIA_URL }}landingpage/img/report.png" />
+							</div>
+						</div>
+
+						<div class="ConProb">
+							<img id="imgProb" src="{{ MEDIA_URL }}landingpage/img/buraco.png" />
+						</div>
+
+						<div class="repDes1"> 
+							<div class="txDes">
+								<p>This is the pothole you pass by everyday. Professionals now know that this problem exists.</p>
+								<br>
+								<p>Also share it on social networks.</p> 
+							</div>
+
+							<div class="ConSoc2">
+								<img id="imgSoc2" src="{{ MEDIA_URL }}landingpage/img/face.png" />
+							</div>
+							<div class="ConSoc3">
+								<img id="imgSoc3" src="{{ MEDIA_URL }}landingpage/img/twit.png" />
+							</div>
+						</div>
+
+						<div class="ConProb2">
+							<img id="imgProb2" src="{{ MEDIA_URL }}landingpage/img/passeio.jpg" />
+						</div>
+
+						<div class="repDes2"> 
+							<div class="txDes1">
+								<p>This is the sidewalk in which you stumble everyday. Professionals now know that this problem exists.</p>
+								<br>
+								<p>Also share it on social networks.</p> 
+							</div>
+
+							<div class="ConSoc2">
+								<img id="imgSoc2" src="{{ MEDIA_URL }}landingpage/img/face.png" />
+							</div>
+							<div class="ConSoc3">
+								<img id="imgSoc3" src="{{ MEDIA_URL }}landingpage/img/twit.png" />
+							</div>
+						</div>
+
+						<div class="repDois">
+							<div class="ConDesDois">Damaged sidewalk.</div>
+							<div class="ConRepDois">
+								<img id="imgRepDois" src="{{ MEDIA_URL }}landingpage/img/report.png" />
+							</div>	
+						</div>
+
+						<div class="ConProb3">
+							<img id="imgProb3" src="{{ MEDIA_URL }}landingpage/img/sin.jpg" />
+						</div>
+
+						<div class="repDes3"> 
+							<div class="txDes3">
+								<p>This is the sign that confuses you everyday. Professionals now know that this problem exists.</p>
+								<br>
+								<p>Also share it on social networks.</p> 
+							</div>
+
+							<div class="ConSoc2">
+								<img id="imgSoc2" src="{{ MEDIA_URL }}landingpage/img/face.png" />
+							</div>
+							<div class="ConSoc3">
+								<img id="imgSoc3" src="{{ MEDIA_URL }}landingpage/img/twit.png" />
+							</div>
+						</div>
+
+						<div class="repTres">
+							<div class="ConDesTres">Contradictory signaling.</div>
+							<div class="ConRepTres">
+								<img id="imgRepTres" src="{{ MEDIA_URL }}landingpage/img/report.png" />
+							</div>	
+						</div>
+
+						<div class="repDes4"> 
+							<div class="txDes4">
+								<p>Want to be one of the first to make a report?</p><br>
+
+								<div class="go">
+									<a href="/make-the-difference"><p>Go!</p></a>
+								</div>
+							</div>
+						</div>
+						<div class="repQuatro">
+							<div class="ConDesQuatro">Make the difference!</div>
+							<div class="ConRepQuatro">
+								<img id="imgRepQuatro" src="{{ MEDIA_URL }}landingpage/img/report.png" />
+							</div>	
+						</div>	
+					</div>
+
+					<div class="messUm">
+						<div class="btMessUm" style="cursor: pointer">
+							<div class="txMessUm">
+								<p>Help your city</p>
+								<p>to help you</p>
+							</div>	
+							<div class="triUm" style="cursor: pointer">
+								<div class="Contri">
+									<img id="imgTri" src="{{ MEDIA_URL }}landingpage/img/tri.png" />
+								</div>
+							</div>
+						</div>	
+					</div>
+
+					<div class="messUmDois">
+						<div class="btMessUmDois" style="cursor: pointer">
+							<div class="txMessUmDois">
+								<p>SPERO Services</p>
+								<p>for professionals</p>
+							</div>
+
+							<div class="triUmDois">
+								<div class="triangulo2">
+									<img id="imgTri" src="{{ MEDIA_URL }}landingpage/img/tri2.png" />
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div><!-- sliUm -->
+
+				<div class="sliDois">
+					<div class="conAni">
+						<div class="ConT1">
+							<img id="imgT" src="{{ MEDIA_URL }}landingpage/img/tele.png" />
+						</div>
+						<div class="ConT2">
+							<img id="imgT" src="{{ MEDIA_URL }}landingpage/img/tele2.png" />
+						</div>
+						<div class="ConT3">
+							<img id="imgT" src="{{ MEDIA_URL }}landingpage/img/tele3.png" />
+						</div>
+
+						<div class="numeros">
+							<div class="numUm" style="cursor: pointer">
+								<p>1</p>
+							</div>
+
+							<div class="numDois" style="cursor: pointer">
+								<p>2</p>
+							</div>
+
+							<div class="numTres" style="cursor: pointer">
+								<p>3</p>
+							</div>
+						</div>	
+					</div><!-- conAni -->
+
+					<div class="afeWrap">
+						<div class="conAfe">
+							<div class="afect">
+								<div class="ConEx">
+									<img id="imgEx" src="{{ MEDIA_URL }}landingpage/img/exclama.png" />
+								</div>
+
+								<div class="exMess">
+									<p>Diz que problemas também te</p>
+									<p>afectam e partilha-os!</p>
+								</div>
+
+								<div class="ConSoc">
+									<img id="imgSoc" src="{{ MEDIA_URL }}landingpage/img/soci.png" />
+								</div>
+							</div>
+						</div>
+
+						<div class="news">
+							<form id="nIn" method="get" action=" ">
+								<div class="per">Want to know more?</div>
+							    <input type="text" class="rect" placeholder="  leave your email..." value="" name="q" size="21" maxlength="120">
+							    <input class="but" value="SUBMETER">
+							    <div class="but2">SUBMIT</div>
+							</form>
+						</div>
+
+						<div class="messDois">
+							<div class="btMessDois" style="cursor: pointer">
+								<div class="txMessDois">
+									<p>Professionals will be aware</p>
+									<p>to solve your reports</p>
+								</div>
+								<div class="triDois">
+									<div class="ConTriDois">
+										<img id="imgTriDois" src="{{ MEDIA_URL }}landingpage/img/tri2.png" />
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div><!-- afeWrap -->	
+				</div><!-- sliDois -->
+
+				<div class="sliTres">
+					<div class="messTres">
+						<div class="txMessTres">
+							<p>SPERO Services for professionals</p>
+						</div>
+					</div>
+
+					<div class="servi">
+						<div class="desc1">
+							<div class="titDesc1">SPEROBuilding</div>
+							<div class="txDesc1">
+								<p>Building cadastre and the categorized inventory (including photos) of georreferenced damages, obtained with in situ surveys using mobile devices - tablets. Spero uses scientific decision-aid models to prioritize interventions.</p><br>
+								<p><h1>Target clients:</h1> Private Organizations, Real Estate Management Companies, Real Estate Funds, Public Administration, Municipalities, and others.</p>
+							</div>	
+						</div>
+						<div class="edif">
+							<div class="ConEd">
+								<img id="imgEd" src="{{ MEDIA_URL }}landingpage/img/edi.png" />
+							</div>
+						</div>
+
+						<div class="desc2">
+							<div class="titDesc2">SPERORoads</div>
+							<div class="txDesc2">
+								<p>Road assets cadastre and the categorized inventory of georreferenced damages such as road pavement pathologies, obtained with in situ surveys, including photos, using mobile devices - tabletsr. Spero uses scientific decision-aid models to prioritize interventions.</p><br>
+								<p><h1>Target clients:</h1> Municipalities and others.</p>
+							</div>
+						</div>
+						<div class="estr">
+							<div class="ConEs">
+								<img id="imgEs" src="{{ MEDIA_URL }}landingpage/img/estr.png" />
+							</div>
+						</div>
+
+						<div class="desc3">
+							<div class="titDesc3">SPEROCity</div>
+							<div class="txDesc3">
+								<p>Assets cadastre and the categorized inventory (including photos) of georreferenced damages, obtained with in situ surveys using mobile devices - iPads. Spero uses scientific decision-aid models to prioritize interventions.</p><br>
+								<p><h1>Target clients:</h1> Public Administration, Municipalities, and others.</p>
+							</div>
+						</div>
+						<div class="munic">
+							<div class="ConMun">
+								<img id="imgMun" src="{{ MEDIA_URL }}landingpage/img/mun.png" />
+							</div>
+						</div>	
+
+						<div class="desc4">
+							<div class="titDesc4">SPEROWater</div>
+							<div class="txDesc4">
+								<p>Network cadastre and the categorized inventory (including photos) of georreferenced damages, obtained with in situ surveys using mobile devices - iPads. Spero uses scientific decision-aid models to prioritize interventions.</p><br>
+								<p><h1>Target clients:</h1> Municipalities, Water Supply Companies and others.</p>
+							</div>
+						</div>
+						<div class="agua"> 
+							<div class="ConAg">
+								<img id="imgAg" src="{{ MEDIA_URL }}landingpage/img/agu.png" />
+							</div>
+						</div>	
+					</div><!-- servi -->
+
+					<div class="planeta">
+						<img id="imgP" src="{{ MEDIA_URL }}landingpage/img/planet.png" />
+					</div>
+				</div><!-- sliTres -->
+
+			</div><!-- wrap -->
+		</div><!-- conWrap -->
+	</div><!-- content container -->
+	
+	<!-- Javascript at the bottom -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	<!-- for testing -->
+	<script type="text/javascript" src="{{ MEDIA_URL }}landingpage/js/scrollto.js"></script>
+	<script type="text/javascript" src="{{ MEDIA_URL }}landingpage/js/main.js"></script>
+
+	<!-- for production 
+	<script type="text/javascript" src="js/c070514.js"></script>
+	-->
+</body>
+</html>

@@ -1,0 +1,39 @@
+{% extends "../base.html" %}
+
+{% block appTemplates %}
+
+<script type="text/html" id="login_form_template">
+	<form class="login section" action="/login/" method="post">
+		<input type="text" name="username" class="username" />
+		<input type="password" name="password" class="password"/>
+		<button>Entrar</button>
+		{% csrf_token %}
+	</form>
+</script>
+
+<script type='text/html' id='global_header_template'><![CDATA[
+	<a href="#" class="logo"></a>
+	<ul class="left_menu">
+	<% if(!this.user.isNew() && !this.user.get('anonymous')){%>
+		<li><a href="#map" class= <% if (this.controller=='#map') {%>"selected"<% } %>>Mapa</a></li>
+		<li><a href="#data" class=<% if (this.controller=='#data') {%>"selected"<% } %>>Dados</a></li>
+		<li><a href="#occurrences" class=<% if (this.controller=='#occurrences') {%>"selected"<% } %>>Importação de Dados</a></li>
+		<li><a href="#baselayer" class=<% if (this.controller=='#baselayer') {%>"selected"<% } %>>BaseLayer</a></li>
+		<% } %>
+	</ul>
+	<ul class="right_menu">
+	<% if(this.user.isNew()) { %>
+		<li><a href="#login">Login</a></li>
+	<% } else { %>
+		<% if(!this.user.get('anonymous')) { %>
+			<li><a href="#logout" class="logout">Logout</a></li>
+		<% } %>
+	<% } %>
+		<li><a href="{{MEDIA_URL}}catalogo_patologias.pdf">Portefólio</a></li>
+
+		<%if(this.user.get('admin')) {%>
+			<li><a href="/smartroads/manage">Admin</a></li>
+		<%}%>
+
+	</ul>]]>
+</script>

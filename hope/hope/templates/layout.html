@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MapMoth - {% block title %}{% endblock %}</title>
+	{% load i18n %}
+	{% load compress %}
+	<link href="{{ MEDIA_URL }}main/css/layout-default-latest.css" rel="stylesheet" />	
+	<link rel="stylesheet" href="{{ MEDIA_URL }}matrix/css/smoothness/jquery-ui-1.8.5.custom.css" type="text/css" media="screen" charset="utf-8" /> 
+	<link rel="stylesheet" href="{{ MEDIA_URL }}/stylesheets/all.css">
+
+	<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}libs/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+	
+	<link href="{{ MEDIA_URL }}matrix/css/matrix.css" rel="stylesheet" />
+	<link rel="stylesheet" href="{{ MEDIA_URL }}stylesheets/common.css" type="text/css" media="screen" charset="utf-8" /> 
+	<link rel="stylesheet" href="{{ MEDIA_URL }}libs/fusion/css/fusion.css" type="text/css" media="screen" charset="utf-8" />
+	<link rel="stylesheet" href="{{ MEDIA_URL }}libs/slickgrid/slick.grid.css" type="text/css" media="screen" charset="utf-8" />
+	
+	<script type="text/javascript" src="{% url django.views.i18n.javascript_catalog %}"></script>
+	
+	<script src="{{ MEDIA_URL }}libs/jquery-1.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{{ MEDIA_URL }}main/js/libs/jquery-ui-latest.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{{ MEDIA_URL }}main/js/libs/jquery.layout-latest.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="{{ MEDIA_URL }}main/js/libs/jquery.jqote2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{{ MEDIA_URL }}libs/jquery.event.drag-2.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+	<script src="{{ MEDIA_URL }}libs/jquery.pubsub.js" type="text/javascript" charset="utf-8"></script>
+
+	<script src="{{ MEDIA_URL }}main/js/common.js" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+		$('.flash-error').delay(5000).fadeOut("slow")
+		$('.flash-notice').delay(5000).fadeOut("slow")
+	})
+	
+	</script>
+	{% block extraincludes %} {%endblock%}
+</head>
+<body >
+	<div id="wrapper">
+	{% block navigation %}
+	<div id="navigation" >
+		<ul>
+			<li class="{% block nav_home %}{%endblock%}"><a href="/">Home</a></li>
+			<!--<li class="{% block nav_smartroads %}{%endblock%}"><a href="/">SmartRoads</a></li>-->
+			<li class="{% block nav_matrix %}{%endblock%}"><a href="/matrix/"> iKreation</a></li>
+			<li class="control">
+			{% if user.is_authenticated %}
+			<span>Logged in as <span class="username">{{ user.username }}</span> | <a href="/logout"> Logout </a></span>
+			{% else %}
+			<span>Not logged in | <a href="/accounts/login/">Login</a>
+			{% endif %}
+			<!--<form action="/i18n/setlang/" method="POST">
+				{% csrf_token %}
+				<input name="next" type="hidden" value="/matrix/" />
+				<select name="language">
+					{% for lang in LANGUAGES %}
+					<option value="{{lang.0}}">{{ lang.0 }}</option>
+					{% endfor %}
+				</select>
+				<input type="submit" value="Go" />
+			</form> 
+			-->
+			</li>
+		</ul>
+		<div id="subnav">
+			<div id="report_wrap"></div>
+		<ul >
+		{% block subnav_block %}{% endblock %}
+		</ul>
+		
+		</div>
+	</div>
+	{% endblock %}
+	<div id="messages">
+	<!-- show all messages -->
+	{% if flash.error %}<div class="flash-error" >{{ flash.error }}</div>{% endif %}
+	{% if flash.notice %}<div class="flash-notice" >{{ flash.notice }}</div>{% endif %}</div>
+	<div id="content" class="container">
+	<!-- show all messages -->
+	{% block content %}{% endblock %}
+	</div>
+	</div>
+	
+<!--Start of Zopim Live Chat Script
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+$.src='//cdn.zopim.com/?MLxNl2OZ8qLe0DKdR8ZHkcOmqdaMUsoX';z.t=+new Date;$.
+type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+</script>-->
+<!--End of Zopim Live Chat Script-->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27746042-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

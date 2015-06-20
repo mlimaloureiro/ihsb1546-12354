@@ -1,0 +1,48 @@
+#data_pane {
+	height: 100%;
+	margin:		0 auto;
+	display: none;
+}
+
+#occurrence_pane {
+	height: 100%;
+	margin:	0 auto;
+	display: none;
+}
+
+#objects_list {
+	overflow-y: scroll;
+}
+
+/*
+ * Form elements
+ -----------------------*/
+
+.ui-dform-form label{
+display:block;
+font-weight:bold;
+text-align:right;
+width:140px;
+float:left;
+clear: left;
+}
+
+.ui-dform-form .small{
+color:#666666;
+display:block;
+font-size:11px;
+font-weight:normal;
+text-align:right;
+width:140px;
+}
+
+.ui-dform-form input{
+float:left;
+font-size:12px;
+padding:4px 2px;
+border:solid 1px #aacfe4;
+width:200px;
+margin:2px 0 20px 10px;
+}
+
+

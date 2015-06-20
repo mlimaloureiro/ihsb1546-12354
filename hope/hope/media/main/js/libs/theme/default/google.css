@@ -1,0 +1,15 @@
+.olLayerGoogleCopyright {
+    right: 3px;
+    bottom: 2px;
+    left: auto; 
+ 	visibility: hidden;
+}
+.olLayerGooglePoweredBy {
+    left: 2px;
+    bottom: 2px;   
+}
+
+.olLayerGooglePoweredBy.olLayerGoogleV3.gmnoprint {
+    visibility:hidden;
+    display:none;
+}

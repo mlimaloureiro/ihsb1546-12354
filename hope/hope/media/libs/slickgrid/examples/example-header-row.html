@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<link rel="stylesheet" href="../css/smoothness/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" charset="utf-8" />
+        <link rel="stylesheet" href="../slick.grid.css" type="text/css" media="screen" charset="utf-8" />
+		<link rel="stylesheet" href="examples.css" type="text/css" media="screen" charset="utf-8" />
+        <style>
+            .slick-headerrow-column {
+                background: #87ceeb;
+            }
+
+            .slick-headerrow-column input {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+	</head>
+	<body>
+        <div style="position:relative">
+		<div style="width:600px;">
+			<div id="myGrid" style="width:100%;height:500px;"></div>
+		</div>
+
+		<div class="options-panel">
+            <h2>Demonstrates:</h2>
+            <ul>
+                <li>Using a fixed header row to implement column-level filters</li>
+                <li>Type numbers in textboxes to filter grid data</li>
+            </ul>
+		</div>
+        </div>
+
+		<script src="../lib/firebugx.js"></script>
+
+		<script src="../lib/jquery-1.7.min.js"></script>
+		<script src="../lib/jquery-ui-1.8.16.custom.min.js"></script>
+		<script src="../lib/jquery.event.drag-2.0.min.js"></script>
+
+        <script src="../slick.core.js"></script>
+        <script src="../plugins/slick.cellselectionmodel.js"></script>
+        <script src="../slick.editors.js"></script>
+		<script src="../slick.grid.js"></script>
+
+		<script>
+        var dataView;
+		var grid;
+		var data = [];
+        var options = {
+            enableCellNavigation: true,
+            editable: true,
+            enableAddRow: true,
+            enableCellNavigation: true,
+            asyncEditorLoading: false,
+            autoEdit: true
+        };
+        var columns = [
+            {id:"title", name:"Title", field:"title", width:120, cssClass:"cell-title"},
+            {id:"desc", name:"Description", field:"description", width:100, editor:TextCellEditor},
+            {id:"duration", name:"Duration", field:"duration", editor:TextCellEditor},
+            {id:"%", name:"% Complete", field:"percentComplete", width:80, resizable:false, formatter:GraphicalPercentCompleteCellFormatter, editor:PercentCompleteCellEditor},
+            {id:"effort-driven", name:"Effort Driven", width:80, minWidth:20, maxWidth:80, cssClass:"cell-effort-driven", field:"effortDriven", formatter:BoolCellFormatter, editor:YesNoCheckboxCellEditor}
+        ];
+        var columnFilters = {};
+
+		$(function()
+		{
+			for (var i=0; i<100; i++) {
+				var d = (data[i] = {});
+                for (var j=0; j<columns.length; j++) {
+                    d[columns[j].id] = Math.round(Math.random() * 10);
+                }
+			}
+
+            grid = new Slick.Grid("#myGrid", data, columns, options);
+
+
+
+          
+            window.g = grid
+
+		})
+		</script>
+	</body>
+</html>

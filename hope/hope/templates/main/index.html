@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block nav_home %}current{%endblock%}
+
+{% block content %}
+	<div id="splash">
+		<h1>Welcome to iKreation</h1>
+		<div id="head"></div>
+		<p>You can use <a href="/matrix/">iKreation</a> to create and solve multi-criteria problems.</p>
+		<br/>
+		<p>After you <a href="/accounts/register">register</a>, your account needs to be accepted by the administrators. You'll receive an email notifying your account was validated.</p>
+		<br/>
+		<div id="bd" class="block">
+		<p>Se tiverem problemas técnicos ou sugestões relacionadas com o sistema, não hesitem em nos contactar através do email provisório:</p>
+<b><a href="mailto: mapmoth@gmail.com">mapmoth@gmail.com</a></b><br/>
+<i> (não se tratam problemas técnico-científicos ou académicos relacionados com elaboração de trabalhos usando métodos de apoio à decisão já implementados)</i>
+</div>
+		<div>Sempre que tiverem problemas com um problema em particular, indicar o identificador do mesmo (visível na barra de endereço)</div>
+		
+		
+		<div style="text-align: center"><br/><br/><b> A User Manual will be available soon </b><br/></div>
+		<div id="footer" class="">
+				<img src="{{ MEDIA_URL }}/images/kreation.png">
+				<img src="{{ MEDIA_URL }}/images/uclogo.png">
+		</div>
+	</div>
+{% endblock %}
+

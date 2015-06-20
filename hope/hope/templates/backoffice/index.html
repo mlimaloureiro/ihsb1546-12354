@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Moth backoffice</title>
+
+	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+	<link href="{{ MEDIA_URL }}libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="{{ MEDIA_URL }}libs/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="span3">
+			<div id="tree" class="well sidebar-nav">
+				<ul class="nav nav-list">
+				<li class="nav-header"> Object types </li>
+				{{rendered|safe}}
+				</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="span9">
+			<h1>Edit type</h1>
+			<p>
+			Here are the fields from this type, you may add, remove and/or edit fields
+			</p>
+
+			<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>Label</th>
+					<th>Specification</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Name</td>
+					<td>String</td>
+				<tr>
+			</tbody>
+			</table>
+			<div style="float: right;">
+				<a href="#" class="btn btn-danger">Cancel</a>
+				<a href="#" class="btn btn-success">Save</a>
+			<div>
+		</div>
+
+	</div>
+
+</div>
+
+<script src="{{ MEDIA_URL }}libs/bootstrap/js/jquery.min.js"></script>
+<script src="{{ MEDIA_URL }}libs/bootstrap/js/bootstrap-transition.js"></script>
+<script src="{{ MEDIA_URL }}libs/bootstrap/js/bootstrap-alert.js"></script>
+<script src="{{ MEDIA_URL }}libs/bootstrap/js/bootstrap-modal.js"></script>
+<script src="{{ MEDIA_URL }}libs/bootstrap/js/bootstrap-dropdown.js"></script>
+<script src="{{ MEDIA_URL }}libs/bootstrap/js/bootstrap-scrollspy.js"></script>
+<script src="{{ MEDIA_URL }}libs/bootstrap/js/bootstrap-tab.js"></script>
+<script src="{{ MEDIA_URL }}libs/bootstrap/js/bootstrap-tooltip.js"></script>
+<script src="{{ MEDIA_URL }}libs/bootstrap/js/bootstrap-popover.js"></script>
+<script src="{{ MEDIA_URL }}libs/bootstrap/js/bootstrap-button.js"></script>
+<script src="{{ MEDIA_URL }}libs/bootstrap/js/bootstrap-collapse.js"></script>
+<script src="{{ MEDIA_URL }}libs/bootstrap/js/bootstrap-carousel.js"></script>
+<script src="{{ MEDIA_URL }}libs/bootstrap/js/bootstrap-typeahead.js"></script>
+
+
+<script type="text/javascript">
+$(function(){
+$('.nav ul li ul').hide()
+$('li').contents()
+        .filter(function(){return this.nodeType === 3});
+        //.wrap('<a>');
+
+$('a').click(function() {
+    $(this).nextAll('ul').toggle()
+})
+});
+</script>
+</body>
+
+</html>
