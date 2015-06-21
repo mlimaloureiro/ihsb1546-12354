@@ -31,3 +31,4 @@ simplejson==3.3.0
 six==1.9.0
 webassets==0.10
 wsgiref==0.1.2
+jsmin==2.1.1
