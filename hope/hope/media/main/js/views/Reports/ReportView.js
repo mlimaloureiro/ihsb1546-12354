@@ -194,11 +194,6 @@ var ReportView = Backbone.View.extend({
 		} else {
 			this.markers = [];
 		}
-	
-		this.bounds = new google.maps.LatLngBounds();
-		this.bounds.extend(new google.maps.LatLng(40.20000, -8.41667));
-		this.map.fitBounds(this.bounds);
-		this.map.setZoom(12);
 	},
 
 	/**
@@ -350,6 +345,16 @@ var ReportView = Backbone.View.extend({
 
 	createCluster: function() {
 		var that = this;
+		this.bounds = new google.maps.LatLngBounds();
+
+		for (var index in that.markers) {
+			var mapLatlng = new google.maps.LatLng(
+				that.markers[index].getPosition().lat(), 
+				that.markers[index].getPosition().lng()
+			);
+			this.bounds.extend(mapLatlng);
+		}
+
 		that.markerCluster = new MarkerClusterer(that.map, that.markers);
 		that.markerCluster.setMaxZoom(15);
 		that.map.fitBounds(that.bounds);
@@ -469,8 +474,9 @@ var ReportView = Backbone.View.extend({
 		//console.log("[ReportView] creating new occurrence");
 		var category = $('#chzn_new_occurrence').val();
 
-		// for now, get the center of the map in the screen
-		var startCoordinate = this.currentLocation;
+		// get current center
+		var startCoordinate = this.map.getCenter();
+		this.map.setCenter(startCoordinate);
 
 		// tem de ter uma categoria escolhida
 		if (category != undefined) {
