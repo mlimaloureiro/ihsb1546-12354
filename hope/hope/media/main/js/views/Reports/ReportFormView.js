@@ -122,9 +122,18 @@ var ReportFormView = Backbone.View.extend({
 		if (this.model.get('default_values')['permission'] == 1) {
 			drag = true;
 		}
+		
+		// @todo remove this later, resetMaps should handle this
+		if (this.view.markers != null) {
+			for (var i = 0; i < this.view.markers.length; i++) {
+				this.view.markers[i].setMap(null);
+			};
+			this.view.markers.length = 0;
+		}
+
 		var marker = new google.maps.Marker({
 			position: mapLatlng,
-			map: that.view.map,
+			map: this.view.map,
 			draggable: drag,
 			title: title,
 			icon: "https://dl.dropboxusercontent.com/u/5427257/spero-ico.png"
@@ -156,16 +165,13 @@ var ReportFormView = Backbone.View.extend({
 						marker.setPosition(mapLatlng);
 					}
 				});
-
-
 			});
 		}
 
-		that.view.markers.push(marker);
-		that.view.bounds.extend(mapLatlng);
-		that.view.map.fitBounds(that.view.bounds);
+		this.view.markers.push(marker);
+		this.view.map.setCenter(mapLatlng);
+		this.view.map.setZoom(12);
 	},
-
 
 	displayVideoForm: function(evt) {
 		console.log('DISPLAYING VIDEO');
